@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="280.12" width="400.12" version="1.0" y="0" x="0" xmlns:cc="http://creativecommons.org/ns#" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata> <defs>
+  <radialGradient id="radialGradient11198" gradientUnits="userSpaceOnUse" cy="242.88" cx="309.52" gradientTransform="matrix(1 0 0 1 -7.0291 -42)" r="50">
+   <stop style="stop-color:#cecef5;" offset="0"/>
+   <stop style="stop-color:#1717a3;" offset=".77778"/>
+   <stop style="stop-color:#000074;" offset="1"/>
+  </radialGradient>
+  <radialGradient id="radialGradient11210" gradientUnits="userSpaceOnUse" cy="242.88" cx="309.52" gradientTransform="matrix(.7 0 0 0.7 378.36 36.787)" r="50">
+   <stop style="stop-color:#c4eccf;" offset="0"/>
+   <stop style="stop-color:#2d8b3d;" offset=".80556"/>
+   <stop style="stop-color:#425d10;" offset="1"/>
+  </radialGradient>
+ </defs>
+ <g style="font-size:18px; font-family:Arial; stroke-miterlimit:4;" transform="translate(-255.04 -141.98)">
+  <rect style="fill-rule:nonzero;stroke:#6b9e9e;stroke-dasharray:none;stroke-width:0.00960747;fill:#afafaf;" height="61.165" width="1.7651" y="253.97" x="605.57"/>
+  <polygon style="fill:#35772a;" points="44.144 211.89 44.144 44.144 70.631 44.144 35.316 0 0 44.144 26.488 44.144 26.488 211.89 26.488 211.89" transform="matrix(0 .21939 .28316 0 511.06 211.78)"/>
+  <polygon style="fill:#15159f;" points="44.144 211.89 44.144 44.144 70.631 44.144 35.316 0 0 44.144 26.488 44.144 26.488 211.89 26.488 211.89" transform="matrix(0 .21939 -.28316 0 428.34 211.78)"/>
+  <rect style="fill-rule:nonzero;stroke:#6b9e9e;stroke-dasharray:none;stroke-width:0.00847452;fill:#afafaf;" height="47.561" width="1.7662" y="267.58" x="317.7"/>
+  <path style="stroke-width:0.54221171;display:block;fill:url(#radialGradient11198);" d="m 318.53341,169.18961 c -27.44622,0 -49.73936,22.27691 -49.73936,49.72889 0,27.45198 22.29314,49.72891 49.73936,49.7289 27.44621,0 49.71843,-22.2769 49.71843,-49.7289 0,-27.45198 -22.27222,-49.72889 -49.71843,-49.72889 z"/>
+  <path style="stroke-width:0.37954822;display:block;fill:url(#radialGradient11210);" d="m 606.25338,184.61938 c -19.21236,0 -34.81755,15.59383 -34.81755,34.81022 0,19.21639 15.60519,34.81024 34.81755,34.81023 19.21235,0 34.8029,-15.59383 34.8029,-34.81023 0,-19.21639 -15.59055,-34.81022 -34.8029,-34.81022 z"/>
+  <text y="205.23122" x="386.58078"><tspan x="386.58078" style="font-size:32px;fill:#15159f;font-style:italic;" y="205.23122">F</tspan></text>
+  <text y="205.23122" x="544.58093"><tspan y="205.23122" x="544.58093" style="font-size:32px;fill:#35772a;font-style:italic;" >F</tspan></text>
+  <text style="fill:#15159f;" y="211.49362" x="397.92355"><tspan x="397.92355" y="211.49362">1</tspan></text>
+  <text y="211.49362" x="555.92371"><tspan y="211.49362" x="555.92371" style="fill:#35772a;">2</tspan></text>
+  <text style="fill:#ffffff;" y="226.92386" x="300.58319"><tspan y="226.92386" x="300.58319" style="font-size:32px;font-style:italic;" >m</tspan></text>
+  <text style="fill:#ffffff;" y="233.60944" x="327.12335"><tspan y="233.60944" x="327.12335">1</tspan></text>
+  <text style="fill:#ffffff;" y="226.978" x="587.53589"><tspan y="226.978" x="587.53589" style="font-size:32px;font-style:italic;" >m</tspan></text>
+  <text style="fill:#ffffff;" y="233.66357" x="614.07629"><tspan y="233.66357" x="614.07629">2</tspan></text>
+  <path style="fill:#afafaf;" d="m 334.68851,309.50391 -15.28589,3.63091 15.28589,3.6472 0,-2.7354 58.0864,0 0,-0.0326 139.4807,0 0,-1.75847 -139.4807,0 0,-0.0326 -58.0864,0 0,-2.71911 z m 255.67794,0 0,2.71911 -58.08639,0 0,1.8236 58.08639,0 0,2.7354 15.2859,-3.6472 -15.2859,-3.63091 z"/>
+  <text y="307.6944" x="465.33426"><tspan x="465.33426" style="font-size:32px;font-style:italic;" y="307.6944">r</tspan></text>
+  <text style="fill:#15159f;" y="390.77545" x="337.26346"><tspan x="337.26346" style="font-size:32px;fill:#15159f;font-style:italic;" y="390.77545">F</tspan></text>
+  <text style="fill:#35772a;" y="390.77545" x="409.26343"><tspan y="390.77545" x="409.26343" style="font-size:32px;fill:#35772a;font-style:italic;" >F</tspan></text>
+  <text style="fill:#15159f;" y="395.03784" x="348.60623"><tspan x="348.60623" y="395.03784">1</tspan></text>
+  <text style="fill:#35772a;" y="395.03784" x="420.6062"><tspan y="395.03784" x="420.6062" style="fill:#35772a;">2</tspan></text>
+  <text y="390.02667" x="375.26346"><tspan y="390.02667" x="375.26346" style="font-size:32px;font-style:italic;" >=</tspan></text>
+  <text y="390.02667" x="447.26346"><tspan x="447.26346" style="font-size:32px;font-style:italic;" y="390.02667">=</tspan></text>
+  <text style="font-size:71.9091568px;" transform="scale(2.2472 0.445)" y="838.81488" x="232.54881"><tspan y="838.81488" x="232.54881" style="font-size:71.9091568px;font-style:italic;">_</tspan></text>
+  <text style="font-size:10px;" y="390.70181" x="480.81573"><tspan y="390.70181" x="480.81573" style="font-size:32px;font-style:italic;" >G</tspan></text>
+  <text y="369.92953" x="548.78723"><tspan x="548.78723" style="font-size:32px;font-style:italic;" y="369.92953">×</tspan></text>
+  <text style="font-size:10px;" y="404.75793" x="546.6145"><tspan y="404.75793" x="546.6145" style="font-size:32px;font-style:italic;" >r</tspan></text>
+  <text y="395.1543" x="561.36359"><tspan x="561.36359" y="395.1543">2</tspan></text>
+  <text y="365.41275" x="513.99066"><tspan x="513.99066" style="font-size:32px;font-style:italic;" y="365.41275">m</tspan></text>
+  <text y="372.09833" x="540.53082"><tspan x="540.53082" y="372.09833">1</tspan></text>
+  <text y="365.41275" x="573.99066"><tspan y="365.41275" x="573.99066" style="font-size:32px;font-style:italic;" >m</tspan></text>
+  <text y="372.09833" x="600.53082"><tspan y="372.09833" x="600.53082">2</tspan></text>
+ </g>
+</svg>
