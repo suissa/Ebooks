@@ -25,14 +25,22 @@ Onde em cada um eu estarei estudando e transformando o que aprender em uma forma
 
 Tenho uma paixão cada vez mais crescente pela Física Quântica e Matemática a qual só me acrescenta mais indagações e como um bom programador preciso ir atrás das respostas independente da dificuldade intrínseca que essa área carrega com si.
 
+![](https://1.bp.blogspot.com/-3Phl3nWTNZI/T2M6_qjGweI/AAAAAAAAAI8/F5hLogBHGUI/s1600/ui.jpg)
+
 ## Periodicidade
 
 Irei lançar pelo menos 1 ebook por bimestre para que em cada um nós possamos juntamente galgar os degraus da sapiência.
 
+## Preço
+
+> **Sério que você achou que ia ser pago?**
+> 
+> Tá mais por fora que cotovelo de caminhoneiro!
+
 ## Ebooks
 
-- [Os Fenômenos](Os Fenômenos)
-- [A Gravidade](A Gravidade)
+- [Os Fenômenos - iniciando](Os Fenômenos)
+- [A Gravidade - iniciando](A Gravidade)
 
 
 
