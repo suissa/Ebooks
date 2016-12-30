@@ -139,18 +139,68 @@ Eu lhe indago isso porque antes de escrever esse conteúdo eu nunca tinha me per
 > 
 > Provavelmente na corda correto? Não entrarei agora no assunto Energia, mas para nossa concepção é mais fácil "ver" Energia em algo que se movimenta, tem uma frequência, assim como as ondas sonoras, do mar, etc.
 > 
-> Agora imagine se tudo, na escala Plank, é formado por algo que possui uma frequência ressonante, porém sua massa é desprezível assim como do Elétron. Querendo ou não essa massa pode ser uma consequência de uma propriedade intrísceca à qualquer partícula do Universo, algo que posso usar para tentar basear essa ideia louca é o [Boson de Higgs](https://pt.wikipedia.org/wiki/B%C3%B3son_de_Higgs), que falarei no ebook sobre Modelo Padrão: 
+> Agora imagine se tudo, na escala Plank, é formado por algo que possui uma frequência ressonante, porém sua massa é desprezível assim como do Elétron. Querendo ou não essa massa pode ser uma consequência de uma propriedade intrísceca à qualquer partícula do Universo, algo que posso usar para tentar basear essa ideia louca é o [Boson de Higgs](https://pt.wikipedia.org/wiki/B%C3%B3son_de_Higgs), que falarei mais no ebook sobre Modelo Padrão: 
 
 
 ![](https://raw.githubusercontent.com/suissa/Ebooks/master/Fisica/S%C3%A9rie%20-%20O%20Tempo/A%20Gravidade/images/higgs01.gif)
 
 ```
-A partícula chamada Bóson de Higgs é de fato o quantum (partícula) de um dos componentes de um campo de Higgs. No espaço vazio, o campo de Higgs adquire um valor diferente de zero, que permeia a cada lugar no universo todo o tempo. Este valor da expectativa do vácuo (VEV) do campo de Higgs é constante e igual a 246 GeV. A existência deste VEV diferente de zero **tem um papel fundamental: dá a massa a cada partícula elementar, incluindo o próprio bóson de Higgs**.
+A partícula chamada Bóson de Higgs é de fato o quantum (partícula) 
+de um dos componentes de um campo de Higgs. No espaço vazio, o 
+campo de Higgs adquire um valor diferente de zero, que permeia a cada lugar 
+no universo todo o tempo. Este valor da expectativa do vácuo (VEV) do campo 
+de Higgs é constante e igual a 246 GeV. A existência deste VEV diferente de 
+zero **tem um papel fundamental: dá a massa a cada partícula elementar, 
+incluindo o próprio bóson de Higgs**.
 
-No detalhe, a aquisição de um VEV diferente de zero quebra espontaneamente a simetria de calibre da força eletrofraca, um fenômeno conhecido como o mecanismo de Higgs. Este é o único mecanismo conhecido capaz de dar a massa aos bóson de calibre (particulas transportadoras de força) que é também compatível com teorias do calibre.
+No detalhe, a aquisição de um VEV diferente de zero quebra espontaneamente a
+simetria de calibre da força eletrofraca, um fenômeno conhecido como o
+mecanismo de Higgs. Este é o único mecanismo conhecido capaz de dar a massa
+aos bóson de calibre (particulas transportadoras de força) que é também 
+compatível com teorias do calibre.
 ```
 
 ![](https://raw.githubusercontent.com/suissa/Ebooks/master/Fisica/S%C3%A9rie%20-%20O%20Tempo/A%20Gravidade/images/higgs02.gif)
+
+Eu ja conhecia seu conceito até porque usei-o na [minha metodologia de tomic Design Behavior](http://nomadev.com.br/atomic-design-b%C3%B3sons-e-quarks-extended/) conceituando-o como um placeholder, no Stylus, o qual serve para darmos propriedades para meus "atomos", confira um exemplo:
+
+```
+$bold
+  font-weight bold
+
+.title
+  @extend $bold
+```
+
+Isso gerara o seguinte código:
+
+```
+
+.title {
+  font-weight: bold;
+}
+
+```
+
+Caso eu usasse uma *class* em vez do *placeholder* ficaria assim:
+
+```
+.bold
+  font-weight bold
+
+.title
+  @extend $bold
+```
+
+Geraria isso, ocasionando o aumento do CSS pelo fato de gerar o código da class, ja no *placeholder* ele só gera o código onde é requisitado:
+
+```
+.bold,
+.title{
+  font-weight: bold;
+}
+```
+
 
 Com isso entendemos que a massa que uma partícula possui advém desse tal de Bóson de Higgs, certo?? E o que ele é?
 
