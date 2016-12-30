@@ -55,18 +55,19 @@ Para resolvermos problemas assim é bem fácil, praticamente tudo é uma propor�
 
 Já podemos iniciar pensando assim:
 
+```
+
 9.81 = 1 unidade
 25.93 = x
 
 X = 25.93 / 9.81
 X = 2.64
 
-
-
-
+```
 
 Ou seja, qualquer cálculo de Peso, que fizermos para cá,e quisermos saber o mesmo resultado em Júpiter basta multiplicarmos o valor por essa proporção: 2.64
 
+```js
 const aceleracao = { Terra: 9.82, Jupiter: 25.93 }
 
 const calculaPeso = (massa, aceleracao) => massa * aceleracao
@@ -74,6 +75,7 @@ const calculaPeso = (massa, aceleracao) => massa * aceleracao
 const calculaPesoNaTerra = (massa) =>  calculaPeso(massa, aceleracao.Terra)
 const calculaPesoEmJupiterBaseadoNaTerra = (massa) =>  calculaPesoNaTerra(massa, aceleracao.Terra) * 2.64
 
+```
 
 Assim ficou mais simples de entender nossa analogia? Se não, vamos lá!
 
@@ -81,16 +83,16 @@ Primeiramente vamos armazenar os valores da aceleração da gravidade para a Ter
 const aceleracao = { Terra: 9.82, Jupiter: 25.93 }
 
 Para depois criarmos uma função genérica para calcular qualquer Peso:
-const calculaPeso = (massa, aceleracao) => massa * aceleracao
+`const calculaPeso = (massa, aceleracao) => massa * aceleracao`
 
 A partir dela podemos criar funções específicas para esses cálculos passando apenas o valor da massa:
-const calculaPesoNaTerra = (massa) =>  calculaPeso(massa, aceleracao.Terra)
+`const calculaPesoNaTerra = (massa) =>  calculaPeso(massa, aceleracao.Terra)`
 
 E como estávamos falando que a mesma massa terá Peso diferente dependendo da aceleração da gravidade podemos usar aquela proporção que achamos anteriormente:
-const calculaPesoEmJupiterBaseadoNaTerra = (massa) =>  calculaPesoNaTerra(massa, aceleracao.Terra) * 2.64
+`const calculaPesoEmJupiterBaseadoNaTerra = (massa) =>  calculaPesoNaTerra(massa, aceleracao.Terra) * 2.64`
 
 Caso não tivéssemos calculado a proporção anteriormente poderíamos fazer assim também:
-const calculaPesoEmJupiterBaseadoNaTerra = (massa) =>  calculaPesoNaTerra(massa, aceleracao.Terra) * (aceleracao.Jupiter / aceleracao.Terra)
+`const calculaPesoEmJupiterBaseadoNaTerra = (massa) =>  calculaPesoNaTerra(massa, aceleracao.Terra) * (aceleracao.Jupiter / aceleracao.Terra)`
 
 
 ### Massa - Exercícios
@@ -141,7 +143,9 @@ Adicione os valores de cada aceleração da gravidade no Objeto `aceleracao`, cr
 
 ```js
 const calculaPesoBaseadoNaTerra = (massa, corpo) => {
-  switch
+  switch (corpo) {
+    case 'Jupiter': // chama funçao específica
+  }
 }
 ```
 
