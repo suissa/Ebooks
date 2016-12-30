@@ -23,6 +23,8 @@ Essa série será composta de pelo menos 5 ebooks:
 
 Onde em cada um eu estarei estudando e transformando o que aprender em uma forma mais lúdica para nós programadores.
 
+Tenho uma paixão cada vez mais crescente pela Física Quântica e Matemática a qual só me acrescenta mais indagações e como um bom programador preciso ir atrás das respostas independente da dificuldade intrínseca que essa área carrega com si.
+
 ## Física
 
 - O Tempo
