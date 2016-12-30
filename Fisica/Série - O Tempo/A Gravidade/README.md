@@ -1,13 +1,13 @@
 # A Gravidade
 
 
-## Massa
-
 > **Tentarei não usar o máximo possível de fórmulas matemáticas, para que eu possa fazer-lhe pensar sobre o conceito e como resolver problemas de forma mais lógica.**
 
 
+## Massa
 
 
+![](https://raw.githubusercontent.com/suissa/Ebooks/master/Fisica/S%C3%A9rie%20-%20O%20Tempo/A%20Gravidade/images/peso.jpg)
 
 
 > - **Quando você se “pesa” na farmácia, você sabe o que significa o resultado da balança?**
@@ -123,6 +123,56 @@ const calculaPesoBaseadoNaTerra = (massa, corpo) => {
 ```
 
 *Vamos trabalhar apenas com 2 casas decimais, ou seja, qualquer resultado com mais não será aceito.*
+
+
+### Massa - Para pensar
+
+Após esse pequeno conteúdo sobre a massa e sabendo que existe a [Dualidade onda-partícula](https://pt.wikipedia.org/wiki/Dualidade_onda-corp%C3%BAsculo), para você:
+
+> **- O que é a massa, em nível subatômico?**
+
+Eu lhe indago isso porque antes de escrever esse conteúdo eu nunca tinha me perguntado isso e após ter lido várias coisas sobre o assunto, incluindo o livro [Uma Breve História sobre o Tempo, do Stephen Hawking](), formulei uma ideia **BEM LOUCA** sobre:
+
+> Conhecendo a célebre equação `E=mc^2` podemos afirmar então que a Massa é uma relação entre E(energia) e c(velocidade da luz no vácuo), tudo bem?
+> 
+> Levando esse conceito de Energia para algo bem mais comum, você consegue "ver" mais Energia em uma bola parada ou em uma corda sendo balançada?
+> 
+> Provavelmente na corda correto? Não entrarei agora no assunto Energia, mas para nossa concepção é mais fácil "ver" Energia em algo que se movimenta, tem uma frequência, assim como as ondas sonoras, do mar, etc.
+> 
+> Agora imagine se tudo, na escala Plank, é formado por algo que possui uma frequência ressonante, porém sua massa é desprezível assim como do Elétron. Querendo ou não essa massa pode ser uma consequência de uma propriedade intrísceca à qualquer partícula do Universo, algo que posso usar para tentar basear essa ideia louca é o [Boson de Higgs](https://pt.wikipedia.org/wiki/B%C3%B3son_de_Higgs), que falarei no ebook sobre Modelo Padrão: 
+
+
+![](https://raw.githubusercontent.com/suissa/Ebooks/master/Fisica/S%C3%A9rie%20-%20O%20Tempo/A%20Gravidade/images/higgs01.gif)
+
+```
+A partícula chamada Bóson de Higgs é de fato o quantum (partícula) de um dos componentes de um campo de Higgs. No espaço vazio, o campo de Higgs adquire um valor diferente de zero, que permeia a cada lugar no universo todo o tempo. Este valor da expectativa do vácuo (VEV) do campo de Higgs é constante e igual a 246 GeV. A existência deste VEV diferente de zero **tem um papel fundamental: dá a massa a cada partícula elementar, incluindo o próprio bóson de Higgs**.
+
+No detalhe, a aquisição de um VEV diferente de zero quebra espontaneamente a simetria de calibre da força eletrofraca, um fenômeno conhecido como o mecanismo de Higgs. Este é o único mecanismo conhecido capaz de dar a massa aos bóson de calibre (particulas transportadoras de força) que é também compatível com teorias do calibre.
+```
+
+![](https://raw.githubusercontent.com/suissa/Ebooks/master/Fisica/S%C3%A9rie%20-%20O%20Tempo/A%20Gravidade/images/higgs02.gif)
+
+Com isso entendemos que a massa que uma partícula possui advém desse tal de Bóson de Higgs, certo?? E o que ele é?
+
+> 
+> Coincidentemente acabei de encontrar uma notícia muito importante para minha dissertação: [](http://ciencia.estadao.com.br/noticias/geral,particula-sem-massa-buscada-ha-85-anos-e-criada-em-laboratorio,1726707)
+
+
+> **Quero que você leia BEM essa parte da matéria:**
+> 
+> A equipe coordenada por Hasan vasculhou uma base de dados que tinha a descrição de um milhão de tipos de cristais e descobriu que um deles, o arsenieto de tântalo, parecia promissor.
+
+Vamos tentar analisar como é que eles nessa mineração de dados?
+
+> Provavelmente essa base de dados possui "objetos" que descrevem esses cristais, logo eles provavelmente definiram quais as propriedades específicas e sua faixa de valores para que fosse meramente possível a criação dessa partícula
+
+- [https://pt.wikipedia.org/wiki/Arsenieto_de_g%C3%A1lio](https://pt.wikipedia.org/wiki/Arsenieto_de_g%C3%A1lio)
+- [https://pt.wikipedia.org/wiki/T%C3%A2ntalo_(elemento_qu%C3%ADmico)](https://pt.wikipedia.org/wiki/T%C3%A2ntalo_(elemento_qu%C3%ADmico))
+
+
+> **Agora imagine no futuro quando linkarmos bases gigantescas com essas com Machine Learning e for tudo OPEN SOURCE! Cada pesquisa criada utilizando-se esse sistema DEVERIA OBRIGATORIAMENTE ser liberada gratuitamente e de forma aberta.**
+
+> Quando esse cristal especial foi bombardeado com raios de fótons de alta energia, o formato, direção e tamanho dos raios indicaram modificação no posicionamento dos elétrons que correspondia ao comportamento esperado pelo férmion de Weyl.
 
 ## Densidade
 
