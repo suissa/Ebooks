@@ -691,6 +691,22 @@ Para criarmos aprendermos essa função foi necessário utilizarmos/conhecermos:
 
 ### Exemplo com Matemática
 
+#### Transformar todos os valores de um conjunto
+
+
+Funções de transformação:
+
+```js
+const toDouble = (num) => num * 2
+const toSquare = (num) => num * num
+const toCube = (num) => num * num * num
+```
+
+- para o dobro: [1, 2, 3, 4].map(toDouble)
+- para o quadrado: [1, 2, 3, 4].map(toSquare)
+- para o cubo: [1, 2, 3, 4].map(toCube)
+
+
 ### Exemplo com Fisica
 
 ### Exemplo com Química
