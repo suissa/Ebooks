@@ -709,6 +709,32 @@ const toCube = (num) => num * num * num
 
 ### Exemplo com Fisica
 
+
+Funções de transformação:
+
+```js
+
+const calcDensity = (obj) => obj.m / obj.V
+
+```
+
+- calcular a densidade de todos os corpos:
+
+```js
+
+const objeto1 = {m: 100, V: 10}
+const objeto2 = {m: 70, V: 3}
+const objeto3 = {m: 50, V: 0.2}
+const objeto4 = {m: 1, V: 3}
+
+const amostra = [ objeto1, objeto2, objeto3, objeto4 ]
+
+const densidades = amostra.map(calcDensity)
+// [ 10, 23.333333333333332, 250, 0.3333333333333333 ]
+
+```
+
+
 ### Exemplo com Química
 
 ### Exemplo com Biologia
