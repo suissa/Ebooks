@@ -689,4 +689,20 @@ Para criarmos aprendermos essa função foi necessário utilizarmos/conhecermos:
 
 ## Map - Exemplos
 
+### Exemplo com Matemática
 
+### Exemplo com Fisica
+
+### Exemplo com Química
+
+### Exemplo com Biologia
+
+### Exemplo com Português
+
+### Exemplo com Inglês
+
+### Exemplo com Geografia
+
+### Exemplo com História
+
+### Exemplo com Filosofia
