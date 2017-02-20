@@ -7,6 +7,9 @@
 ![](https://raw.githubusercontent.com/Webschool-io/workshop-js-funcional-free/master/assets/images/array-map.png)
 
 
+> Analisando a imagem acima podemos inferir que a função que o `map` irá executar em cada 
+> fruta é a de **cortar**, correto?
+
 
 ## Pré-conhecimentos
 
