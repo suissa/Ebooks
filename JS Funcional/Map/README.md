@@ -834,7 +834,7 @@ passando `data` como parâmetro.
 
 ## Map - Conclusão
 
-Para criarmos e aprendermos essa função foi necessário utilizarmos/conhecermos:
+Para criarmos/aprendermos essa função foi necessário conhecermos/utilizarmos:
 
 - arrow function
 - destructuring assignment
