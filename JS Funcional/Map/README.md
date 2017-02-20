@@ -1004,6 +1004,9 @@ resultado:  [ { simbol: 'Be', Z: 4, radioactive: false },
 ```
 
 
+**[A execução desse código pode ser visualizada aqui](https://goo.gl/Ie1Yl6)**
+
+
 ### Exemplo com Biologia
 
 ### Exemplo com Português
