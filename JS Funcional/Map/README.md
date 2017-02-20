@@ -912,17 +912,22 @@ module.exports = transformToSeconds
 
 Funções de transformação:
 
+- para o dobro
+- para o quadrado
+- para o cubo
+
 ```js
 
-const toDouble = (num) => num * 2
-const toSquare = (num) => num * num
-const toCube = (num) => num * num * num
+const toDouble = ( num ) => num * 2
+const toSquare = ( num ) => num * num
+const toCube = ( num ) => num * num * num
+
+const doubles = [1, 2, 3, 4].map( toDouble )
+const squares = [1, 2, 3, 4].map( toSquare )
+const cubes = [1, 2, 3, 4].map( toCube )
 
 ```
 
-- para o dobro: [1, 2, 3, 4].map(toDouble)
-- para o quadrado: [1, 2, 3, 4].map(toSquare)
-- para o cubo: [1, 2, 3, 4].map(toCube)
 
 
 ### Exemplo com Fisica
@@ -932,7 +937,7 @@ Funções de transformação:
 
 ```js
 
-const calcDensity = (obj) => obj.m / obj.V
+const calcDensity = ( obj ) => obj.m / obj.V
 
 ```
 
@@ -940,10 +945,10 @@ const calcDensity = (obj) => obj.m / obj.V
 
 ```js
 
-const objeto1 = {m: 100, V: 10}
-const objeto2 = {m: 70, V: 3}
-const objeto3 = {m: 50, V: 0.2}
-const objeto4 = {m: 1, V: 3}
+const objeto1 = { m: 100, V: 10 }
+const objeto2 = { m: 70, V: 3 }
+const objeto3 = { m: 50, V: 0.2 }
+const objeto4 = { m: 1, V: 3 }
 
 const amostra = [ objeto1, objeto2, objeto3, objeto4 ]
 
@@ -970,9 +975,9 @@ Função de mapeamento:
 
 const Z_LIMIT = 83
 
-const classifiquePeloZ = ( atom ) => ( atom.Z >= Z_LIMIT) 
-                                                            ? Object.assign({}, atom, { radioactive: true })
-                                                            : Object.assign({}, atom, { radioactive: false })
+const classifiquePeloZ = ( atom ) => ( atom.Z >= Z_LIMIT ) 
+                                                            ? Object.assign( {}, atom, { radioactive: true } )
+                                                            : Object.assign( {}, atom, { radioactive: false } )
 
 ```
 
@@ -982,14 +987,14 @@ Que usaremos na seguinte amostra:
 
 ```js
 
-const atom1 = {simbol: 'Be', Z: 4}
-const atom2 = {simbol: 'Sc', Z: 21}
-const atom3 = {simbol: 'Hf', Z: 72}
-const atom4 = {simbol: 'Ta', Z: 73}
-const atom5 = {simbol: 'Ti', Z: 81}
-const atom6 = {simbol: 'Bi', Z: 83}
-const atom7 = {simbol: 'Mt', Z: 109}
-const atom8 = {simbol: 'Cn', Z: 112}
+const atom1 = { simbol: 'Be', Z: 4 }
+const atom2 = { simbol: 'Sc', Z: 21 }
+const atom3 = { simbol: 'Hf', Z: 72 }
+const atom4 = { simbol: 'Ta', Z: 73 }
+const atom5 = { simbol: 'Ti', Z: 81 }
+const atom6 = { simbol: 'Bi', Z: 83 }
+const atom7 = { simbol: 'Mt', Z: 109 }
+const atom8 = { simbol: 'Cn', Z: 112 }
 
 const amostra = [ atom1, atom2, atom3, atom4, atom5, atom6, atom7, atom8 ]
 
@@ -1010,6 +1015,32 @@ resultado:  [ { simbol: 'Be', Z: 4, radioactive: false },
 
 **[A execução desse código pode ser visualizada aqui](https://goo.gl/Ie1Yl6)**
 
+
+Como também podemos criar uma função para mapear os valores da [massa atômica](), pois a mesma é a 
+soma dos prótons e nêutrons do átomo.
+
+
+```js
+
+const calcularMassaAtomica = ( atom ) => Object.assign( {}, atom, { A:  atom.Z + atom.N } )
+// colocar os numeros corretos de N
+const atom1 = { simbol: 'Be', Z: 4, N: 2 }
+const atom2 = { simbol: 'Sc', Z: 21, N: 2 }
+const atom3 = { simbol: 'Hf', Z: 72, N: 2 }
+const atom4 = { simbol: 'Ta', Z: 73, N: 2 }
+const atom5 = { simbol: 'Ti', Z: 81, N: 2 }
+const atom6 = { simbol: 'Bi', Z: 83, N: 2 }
+const atom7 = { simbol: 'Mt', Z: 109, N: 2 }
+const atom8 = { simbol: 'Cn', Z: 112, N: 2 }
+
+const amostra = [ atom1, atom2, atom3, atom4, atom5, atom6, atom7, atom8 ]
+
+const resultado = amostra.map( calcularMassaAtomica )
+console.log('resultado: ', resultado)
+/*
+*/
+
+```
 
 ### Exemplo com Biologia
 
@@ -1032,7 +1063,7 @@ eles  programam
 ```js
 
 const radical = 'program'
-const sufixos = [
+const conjugacoes = [
   { pronome: 'eu', sufixo: 'o' }, 
   { pronome: 'tu', sufixo: 'as' }, 
   { pronome: 'ele', sufixo: 'a' }, 
@@ -1043,10 +1074,11 @@ const sufixos = [
 
 const conjugar = ( radical ) => ( conj ) =>`${conj.pronome} ${radical}${conj.sufixo}`
 
-const conjugacao = sufixos.map( conjugar( radical ) )
+const conjugacao = conjugacoes.map( conjugar( radical ) )
 
 ```
 
+**[A execução desse código pode ser visualizada aqui](https://goo.gl/xky4nC)**
 
 ### Exemplo com Inglês
 
