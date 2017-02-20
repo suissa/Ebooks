@@ -5,7 +5,8 @@
 
 Lembrando do [nosso material do workshop](https://github.com/Webschool-io/workshop-js-funcional-free#map) sobre `map`:
 
-> O `map` é um método que executa um **`callback`** para cada valor de um **`array`** modificando os mesmos, isso faz com que o **`map`** crie um novo **`array`** com os novos valores obtidos. Exemplo:
+> O `map` é um método que executa um **`callback`** para cada valor de um **`array`** modificando os mesmos, isso faz 
+> com que o **`map`** crie um novo **`array`** com os novos valores obtidos. Exemplo:
 
 
 ```javascript
@@ -28,7 +29,8 @@ console.log(x) //[2,4,6]
 Antes de entendermos como implementar o `map`, precisamos [lembrar que ele é um Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor):
 
 
-> A Functor is a function, given a value and a function, unwraps the values to get to its inner value(s), calls the given function with the inner value(s), wraps the returned values in a new structure, and returns the new structure.
+> A Functor is a function, given a value and a function, unwraps the values to get to its inner value(s), calls the given function with the 
+> inner value(s), wraps the returned values in a new structure, and returns the new structure.
 
 Vamos entender parte por parte:
 
@@ -44,6 +46,7 @@ Vamos entender parte por parte:
 Sabendo disso podemos começar a montar nosso `map`, criando a função `functor` que receberá o valor e a função a ser executada:
 
 ```js
+
 function functor(value, fn) {
   return fn(value)
 };
@@ -53,14 +56,17 @@ function functor(value, fn) {
 Colocando ela como um módulo para ser mais facilmente testada:
 
 ```js
+
 const map = (value, fn) => fn(value)
 
 module.exports = map
+
 ```
 
 Podemos testar ela fazendo o seguinte:
 
 ```js
+
 function plus10(value) {
   return value + 10
 };
@@ -68,6 +74,7 @@ function plus10(value) {
 let p10 = functor(10, plus10)
 
 console.log(p10)
+
 ```
 
 ## Testando
@@ -75,6 +82,7 @@ console.log(p10)
 Com isso já criamos a base para o nosso `map`, agora obviamente precisamos fazer a mesma funcionar com *Array*, porém antes iremos escrever o **TESTE** para ela: 
 
 ```js
+
 const expect = require('chai').expect
 
 const map = require('./../actions/map')
@@ -112,11 +120,13 @@ describe('Map',  () => {
     })
   })
 })
+
 ```
 
 Depois basta executarmos `mocha examples/test/map.spec.js`:
 
 ```
+
 ➜ mocha examples/test/map.spec.js
 
 
@@ -140,7 +150,6 @@ Depois basta executarmos `mocha examples/test/map.spec.js`:
      AssertionError: expected NaN to deeply equal [ 10, 20, 30, 40, 50 ]
       at Context.it (examples/test/map.spec.js:34:36)
 
-
 ```
 
 ## Refatorando
@@ -150,16 +159,19 @@ Criei o teste com o *Number* apenas para vermos como a função funciona com 1 v
 Inicialmente irei apenas retornar um *Array* para passarmos no teste do tipo de retorno, aliás também **comentei o teste do *Number* para nos focarmos apenas no *Array*:**
 
 ```js
+
 const map = (values, fn) => {
   let arr = []
 
   return arr
 }
+
 ```
 
 Para depois executarmos o teste novamente:
 
 ```
+
   Map
     Array
       ✓ deve retornar um Array
@@ -184,6 +196,7 @@ Para depois executarmos o teste novamente:
       +]
       
       at Context.it (examples/test/map.spec.js:34:36)
+
 ```
 
 Agora só falta passarmos pelo segundo teste, esse sim é nossa verdadeira prova, então vamos pensar:
@@ -194,6 +207,7 @@ Agora só falta passarmos pelo segundo teste, esse sim é nossa verdadeira prova
 Sabendo disso nosso código ficará assim:
 
 ```js
+
 const map = (values, fn) => {
   let arr = []
 
@@ -203,6 +217,7 @@ const map = (values, fn) => {
 
   return arr
 }
+
 ```
 
 Para garantir vamos executar nosso teste:
@@ -225,6 +240,7 @@ Basta adicionarmos esse teste no nosso `describe`:
 
 
 ```js
+
 it('deve retornar um ERRO caso não seja Array', () => {
   expect(() => map(2, times10)).to.throw(TypeError)
 })
@@ -258,6 +274,7 @@ E para fazeros essa validação, se é um *Array*, existem diversas formas, cont
 Deixando nosso código assim:
 
 ```js
+
 const isArrayLike = (value) => !!(value != null 
                                 && value != undefined 
                                 && value.length 
@@ -277,6 +294,7 @@ const map = (values, fn) => {
 }
 
 module.exports = map
+
 ```
 
 > Percebeu uma coisa diferente na função `isArrayLike`?
@@ -296,17 +314,20 @@ Agora que já temos nossa implementação precisamos analisar esse exemplo puram
 refatorar nosso código até chegar nele:
 
 ```js
+
 // map.funcional.js
 const map = (mapper, [head, ...tail]) =>
   head // condition to go or stop
     ? [ mapper(head), ...map(mapper, tail) ] //recursion
     : [] // stop
+
 ```
 
 Como você deve ter percebido a ordem dos parâmetros é invertida, por isso iremos criar um outro teste para 
 essa função nova apenas invertendo os parâmetros na chamada da função:
 
 ```js
+
 const expect = require('chai').expect
 
 const map = require('./../actions/map.funcional')
@@ -333,6 +354,7 @@ describe('Map',  () => {
     })
   })
 })
+
 ```
 
 E depois rodamos com `mocha examples/test/map.funcional.spec.js`:
@@ -347,6 +369,7 @@ E depois rodamos com `mocha examples/test/map.funcional.spec.js`:
 
 
   3 passing (16ms)
+
 ```
 
 > **PERFEITO!** Nosso teste está passando, agora vamos para a análise pesada do bagulho.
@@ -355,11 +378,13 @@ E depois rodamos com `mocha examples/test/map.funcional.spec.js`:
 ## Analisando o FUNCIONAL
 
 ```js
+
 // map.funcional.js
 const map = (mapper, [head, ...tail]) =>
   head // condition to go or stop
     ? [ mapper(head), ...map(mapper, tail) ] //recursion
     : [] // stop
+
 ```
 
 Analisamos seus parâmetros vimos que o primeiro é a função a ser executada em cada posição do *Array* mas e esse segundo parâmetro `[head, ...tail]`?
@@ -367,6 +392,7 @@ Analisamos seus parâmetros vimos que o primeiro é a função a ser executada e
 Vamos criar um tipo de teste de mesa para que possamos entender os valores de entrada, para isso modifiquei a função para:
 
 ```js
+
 const map = (mapper, [head, ...tail]) =>{
   console.log('mapper', mapper)
   console.log('head', head)
@@ -377,11 +403,13 @@ const map = (mapper, [head, ...tail]) =>{
     ? [ mapper(head), ...map(mapper, tail) ] //recursion
     : [] // stop
 }
+
 ```
 
 Executado o nosso teste podemos verificar o seguinte (peguei apenas a parte do console.log):
 
 ```
+
 mapper (value) => value * 10
 head 1
 tail [ 2, 3, 4, 5 ]
@@ -411,15 +439,18 @@ mapper (value) => value * 10
 head undefined
 tail []
 [head, ...tail] [ undefined ]
+
 ```
 
 Analisando apenas a primeira parte:
 
 ```js
+
 mapper (value) => value * 10
 head 1
 tail [ 2, 3, 4, 5 ]
 [head, ...tail] [ 1, 2, 3, 4, 5 ]
+
 ```
 
 Podemos notar que `[head, ...tail]` nada mais é do que o *Array* completo que entra no `map`, onde o `head` 
@@ -444,6 +475,7 @@ o resto vai para o `tail?`
 Deixando isso mais claro ainda com esse exemplo executado no *Terminal* (precisa executar `node` antes!):
 
 ```js
+
 > let tail = [ 2, 3, 4, 5 ]
 > [666, ...tail]
 [666, 2, 3, 4, 5 ]
@@ -456,6 +488,7 @@ undefined
 undefined
 > g([1, 2, 3, 4, 5])
 1 2 [ 3, 4, 5 ]
+
 ```
 
 Logo ele irá definindo cada valor na sequência do *Array* e para pegarmos "todos" os que sobraram basta usar o *Spread Operator*!
@@ -463,19 +496,23 @@ Logo ele irá definindo cada valor na sequência do *Array* e para pegarmos "tod
 Depois de entendermos com quais valores estamos trabalhando precisamos entender a estrutura da nossa função:
 
 ```js
+
 head // condition to go or stop
   ? [ mapper(head), ...map(mapper, tail) ] //recursion
   : [] // stop
-```  
+  
+```
 
 Nesse caso ela está usando um `if` ternário, traduzindo para um `if` normal fica assim:
 
 ```js
+
 if (head) {
   return [ mapper(head), ...map(mapper, tail) ]
 } else {
   return []
 }
+
 ```
 
 > Perceba que ele não precisou usar o `return`, isso se deve pela forma da criação da função `map` que utilizou [Arrow Function](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `() =>`, quando ela possuir apenas 1 linha a qual já faz o retorno da função não é necessário utilizar `{ }` muito menos o `return`.
@@ -491,6 +528,7 @@ Agora que eu lhe pergunto:
 
 
 ```
+
 mapper (value) => value * 10
 head 1
 tail [ 2, 3, 4, 5 ]
@@ -505,14 +543,17 @@ mapper (value) => value * 10
 head 3
 tail [ 4, 5 ]
 [head, ...tail] [ 3, 4, 5 ]
+
 ```
 
 Sabemos então que na primeira parte essa linha `[ mapper(head), ...map(mapper, tail) ]` irá executar/retornar:
 
 ```js
+
 [ 1 * 10,  // mapper(head)
   ...map((n) => n * 10, [ 2, 3, 4, 5 ])// ...map(mapper, tail)
 ]
+
 ```
 
 Vamos nos atentar ao segundo valor desse *Array* que acredito ser o mais "complexo" de toda essa função. Quando chamarmos `map(mapper, tail)` ele irá chamar a mesma função onde estamos, `map`, passando agora apenas o *Array* `tail` que já não possui o primeiro valor, `head`, e retornar um *Array*. **Porém como precisamos pegar cada valor desse *Array* e "juntar" com o primeiro valor já passado anteriormente necessitamos usar `...map(mapper, tail)` pois será dessa forma que iremos criar o `[ mapper(head), ...map(mapper, tail) ]`.**
@@ -524,6 +565,7 @@ Então para criar a primeira iteração dessa função ela se chama para poder c
 > **ÓTIMA PERGUNTA!** Analise aqui comigo as duas últimas iterações do nosso teste de mesa:
 
 ```js
+
 head 5
 tail []
 [head, ...tail] [ 5 ]
@@ -531,6 +573,7 @@ tail []
 head undefined
 tail []
 [head, ...tail] [ undefined ]
+
 ```
 
 Sabemos através da "tradução" do `if` ternário para o comum que o teste lógico é em cima do `head`, ou seja, enquanto existir valor pro `head` ela irá continuar executando. Logo se esse valor for `undefined` ela irá parar de se chamar e irá retornar `[]`.
@@ -539,6 +582,7 @@ Então perceba que o *Array* de retorno da função `map` é gerado dinamicament
 
 
 ```js
+
 [head, ...tail] [ 1, 2, 3, 4, 5 ]
 
 [head, ...tail] [ 2, 3, 4, 5 ]
@@ -550,6 +594,7 @@ Então perceba que o *Array* de retorno da função `map` é gerado dinamicament
 [head, ...tail] [ 5 ]
 
 [head, ...tail] [ undefined ]
+
 ```
 
 > Sabe o porquê esse *Array* vai diminuindo?
@@ -567,6 +612,7 @@ Então perceba que o *Array* de retorno da função `map` é gerado dinamicament
 Agora iremos aprender como sair do código imperativo:
 
 ```js
+
 const isArrayLike = (value) => !!(value != null 
                                 && value != undefined 
                                 && value.length 
@@ -584,20 +630,24 @@ const map = (values, fn) => {
 
   return arr
 }
+
 ```
 
 Para o código funcional:
 
 ```js
+
 const map = (mapper, [head, ...tail]) =>
   head // condition to go or stop
     ? [ mapper(head), ...map(mapper, tail) ] //recursion
     : [] // stop
+
 ```
 
 Primeira coisa que devemos fazer é refatorar nossos parâmetros de entrada e **uma coisa impotantíssima: a condição de parada da função recursiva**
 
 ```js
+
 const map = ([head, ...tail], fn) => {
   
   let arr = []
@@ -605,17 +655,20 @@ const map = ([head, ...tail], fn) => {
   if (!head) return arr
 
 }
+
 ```
 
 Depois precisamos fazer a chamada recursiva passando os valores corretamente:
 
 ```js
+
 const map = ([head, ...tail], fn) => {
   
   if (!head) return []
 
   return [fn(head), map(tail, fn)]
 }
+
 ```
 
 Com isso estamos quase lá, porém eu não usei `...map(tail, fn)` apenas para vermos como ficaria essa saída errada:
@@ -643,22 +696,26 @@ Então refatorando deixaremos nossa função assim:
 
 
 ```js
+
 const map = ([head, ...tail], fn) => {
   
   if (!head) return []
 
   return [fn(head), ...map(tail, fn)]
 }
+
 ```
 
 Agora basta refatorarmos esse `if` normal para um ternário:
 
 ```js
+
 const map = ([head, ...tail], fn) => (!head) 
                                         ? [] 
                                         : [fn(head), ...map(tail, fn)]
 
 module.exports = map
+
 ```
 
 Executando, `mocha examples/test/map.nosso.spec.js`, nosso teste para essa função teremos o seguinte resultado:
@@ -673,7 +730,9 @@ Executando, `mocha examples/test/map.nosso.spec.js`, nosso teste para essa funç
 
 
   3 passing (17ms)
-``` 
+
+```
+
 
 ## Map - Conclusão
 
@@ -685,7 +744,7 @@ Para criarmos aprendermos essa função foi necessário utilizarmos/conhecermos:
 - if ternário
 - recursão
 
-// **ESCREVR MAIS**
+// **ESCREVER MAIS**
 
 ## Map - Exemplos
 
@@ -697,9 +756,11 @@ Para criarmos aprendermos essa função foi necessário utilizarmos/conhecermos:
 Funções de transformação:
 
 ```js
+
 const toDouble = (num) => num * 2
 const toSquare = (num) => num * num
 const toCube = (num) => num * num * num
+
 ```
 
 - para o dobro: [1, 2, 3, 4].map(toDouble)
