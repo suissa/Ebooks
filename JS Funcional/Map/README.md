@@ -525,7 +525,7 @@ Essa funcionalidade chama-se [Spread operator](https://developer.mozilla.org/pt-
 > (por chamadas de função) ou múltiplos elementos (por array literais) são esperados."
 
 
-Deixando isso mais claro ainda com esse exemplo executado no *Terminal* (precisa executar `node` antes!):
+Esse exemplo executado no *Terminal* (precisa executar `node` antes!) deixará isso mais claro:
 
 ```js
 
@@ -544,7 +544,8 @@ undefined
 
 ```
 
-Logo ele irá definindo cada valor na sequência do *Array* e para pegarmos "todos" os que sobraram basta usar o *Spread Operator*!
+Logo ele irá definir cada valor na sequência do *Array* e para pegarmos "todos" os que sobraram 
+usaremos o *Spread Operator*!
 
 Depois de entendermos com quais valores estamos trabalhando precisamos entender a estrutura da nossa função:
 
@@ -568,16 +569,20 @@ if (head) {
 
 ```
 
-> Perceba que ele não precisou usar o `return`, isso se deve pela forma da criação da função `map` que utilizou [Arrow Function](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `() =>`, quando ela possuir apenas 1 linha a qual já faz o retorno da função não é necessário utilizar `{ }` muito menos o `return`.
+> Perceba que ele não precisou usar o `return`, isso se deve pela forma da criação da função `map` que 
+> utilizou [Arrow Function](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions), `() =>`, quando ela 
+> possuir apenas 1 linha, a qual já faz o retorno da função, não é necessário utilizar `{ }`, muito menos o `return`.
 
 
-Porém além disso ela também está usando recursividade como visto aqui: `[ mapper(head), ...map(mapper, tail) ]`.
+Entretando ela também está usando recursividade, como visto aqui: `[ mapper(head), ...map(mapper, tail) ]`.
 
 Agora que eu lhe pergunto:
 
+
 > O que está acontecendo nessa linha?
-> 
-> Vamos novamente analisar, uma parte do, nosso teste de mesa.
+
+
+Vamos novamente analisar, uma parte do, nosso teste de mesa.
 
 
 ```
@@ -599,7 +604,9 @@ tail [ 4, 5 ]
 
 ```
 
-Sabemos então que na primeira parte essa linha `[ mapper(head), ...map(mapper, tail) ]` irá executar/retornar:
+
+Sabemos então que na primeira parte, essa linha, `[ mapper(head), ...map(mapper, tail) ]` irá executar/retornar:
+
 
 ```js
 
