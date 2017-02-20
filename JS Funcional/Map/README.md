@@ -966,7 +966,9 @@ Função de mapeamento:
 
 const Z_LIMIT = 83
 
-const classifiquePeloZ = ( atom ) => ( atom.Z >= Z_LIMIT) ? atom
+const classifiquePeloZ = ( atom ) => ( atom.Z >= Z_LIMIT) 
+                                                            ? Object.assign({}, atom, { radioactive: true })
+                                                            : Object.assign({}, atom, { radioactive: false })
 
 ```
 
