@@ -623,8 +623,8 @@ chamarmos `map(mapper, tail)` ele irá chamar a mesma função onde estamos, `ma
 **Porém precisamos pegar cada valor desse *Array* e "juntar" com o primeiro valor passado anteriormente, necessitamos 
 utilizar `...map(mapper, tail)` pois será dessa forma que iremos criar o `[ mapper(head), ...map(mapper, tail) ]`.**
 
-Então para criar a primeira iteração dessa função ela se chama para poder criar o resto do *Array*, entretando você 
-deve perguntar-se:
+Para criarmos a primeira iteração dessa função ela deve se chamar/executar para criar o resto do *Array*, 
+logo você deve perguntar-se:
 
 > E como é que ela sabe que deve parar de se chamar?
 >
@@ -646,10 +646,13 @@ tail []
 
 ```
 
-Sabemos através da "tradução" do `if` ternário para o comum que o teste lógico é em cima do `head`, ou seja, enquanto 
-existir valor pro `head` ela irá continuar executando. Logo se esse valor for `undefined` ela irá parar de se chamar e irá retornar `[]`.
+Sabemos através da "tradução" do `if` ternário para o comum que o teste lógico é em cima do `head`, ou seja, 
+enquanto existir valor pro `head` ela irá continuar executando. Logo se esse valor for `undefined` ela irá parar 
+de se chamar e irá retornar `[]`.
 
-Então perceba que o *Array* de retorno da função `map` é gerado dinamicamente em cima do mesmo *Array*, note que o valor passado para cada iteração dessa recursividade é o `[head, ...tail]`. Então vamos ver como ele se comporta no nosso teste de mesa:
+Então perceba que o *Array* de retorno da função `map` é gerado dinamicamente em cima do mesmo *Array*, 
+note que o valor passado para cada iteração dessa recursividade é o `[head, ...tail]`. Então vamos ver como ele 
+se comporta no nosso teste de mesa:
 
 
 ```js
