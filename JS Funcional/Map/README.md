@@ -616,13 +616,22 @@ Sabemos então que na primeira parte, essa linha, `[ mapper(head), ...map(mapper
 
 ```
 
-Vamos nos atentar ao segundo valor desse *Array* que acredito ser o mais "complexo" de toda essa função. Quando chamarmos `map(mapper, tail)` ele irá chamar a mesma função onde estamos, `map`, passando agora apenas o *Array* `tail` que já não possui o primeiro valor, `head`, e retornar um *Array*. **Porém como precisamos pegar cada valor desse *Array* e "juntar" com o primeiro valor já passado anteriormente necessitamos usar `...map(mapper, tail)` pois será dessa forma que iremos criar o `[ mapper(head), ...map(mapper, tail) ]`.**
+Vamos nos atentar ao segundo valor desse *Array* que acredito ser o mais "complexo" de toda essa função. Quando 
+chamarmos `map(mapper, tail)` ele irá chamar a mesma função onde estamos, `map`, passando agora apenas o 
+*Array* `tail` que já não possui o primeiro valor, `head`, e retornar um *Array*. **Porém como precisamos pegar 
+cada valor desse *Array* e "juntar" com o primeiro valor já passado anteriormente necessitamos usar `...map(mapper, tail)` 
+pois será dessa forma que iremos criar o `[ mapper(head), ...map(mapper, tail) ]`.**
 
-Então para criar a primeira iteração dessa função ela se chama para poder criar o resto do *Array*, entretando você deve se perguntar:
+Então para criar a primeira iteração dessa função ela se chama para poder criar o resto do *Array*, entretando você 
+deve perguntar-se:
 
 > E como é que ela sabe que deve parar de se chamar?
 >
-> **ÓTIMA PERGUNTA!** Analise aqui comigo as duas últimas iterações do nosso teste de mesa:
+> \- **ÓTIMA PERGUNTA!** 
+
+
+Analise aqui comigo as duas últimas iterações do nosso teste de mesa:
+
 
 ```js
 
