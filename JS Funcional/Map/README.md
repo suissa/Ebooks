@@ -928,6 +928,70 @@ const cubes = [1, 2, 3, 4].map( toCube )
 
 ```
 
+Podemos também modificar o tipo do retorno dos elementos gerados nesse novo *Array*.
+
+Imaginemos que estamos na aula de Geometria e o professor pergunta qual o volume das seguintes formas geométricas:
+
+```js
+
+const calcularVolume = ( forma ) => Object.assign( {}, forma, { volume: forma.largura * forma.comprimento * forma.altura })
+
+const forma1 = { largura: 2, comprimento: 2, altura: 2 }
+const forma2 = { largura: 12, comprimento: 5, altura: 6 }
+const forma3 = { largura: 33, comprimento: 7, altura: 5 }
+const forma4 = { largura: 50, comprimento: 10, altura: 20 }
+
+const formas = [ forma1, forma2, forma3, forma4 ]
+
+const volumes = formas.map( calcularVolume )
+/*
+[ { largura: 2, comprimento: 2, altura: 2, volume: 8 },
+  { largura: 12, comprimento: 5, altura: 6, volume: 360 },
+  { largura: 33, comprimento: 7, altura: 5, volume: 1155 },
+  { largura: 50, comprimento: 10, altura: 20, volume: 10000 } ]
+*/
+```
+
+
+Mais fácil ainda é fazer uma função para gerar qualquer tabuada para nós:
+
+
+```js
+
+const calcularTabuada = ( num ) => 
+  Array.from({ length: 10 }, (e,i) => (i+1) * num )
+
+console.log(calcularTabuada(4))
+
+```
+
+Ainda não usamos o `map` mas quis mostrar antes essa malandragem marota do `Array.from({ length: 10 }, (e,i) => (i+1) * num )` pois com ele eu crio um *Array* de tamanho 10, onde preencho cada posição com a multiplicação do número que quero a tabuada com `i+1`, precisamos somar o i, que é a posição no *Array*, com 1 pois ele incia em 0.
+
+> E se quisermos toda a tabuada do 3 ao 9?
+
+Agora sim vamos usar o `map`:
+
+```js
+
+const calcularTabuada = ( num ) => 
+  Array.from({ length: 10 }, (e,i) => (i+1) * num )
+
+const numeros = [ 3, 4, 5, 6, 7, 8, 9 ]
+
+const tabuada = numeros.map( calcularTabuada )
+console.log('tabuada: \n', tabuada)
+
+/*
+tabuada: 
+ [ [ 3, 6, 9, 12, 15, 18, 21, 24, 27, 30 ],
+  [ 4, 8, 12, 16, 20, 24, 28, 32, 36, 40 ],
+  [ 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 ],
+  [ 6, 12, 18, 24, 30, 36, 42, 48, 54, 60 ],
+  [ 7, 14, 21, 28, 35, 42, 49, 56, 63, 70 ],
+  [ 8, 16, 24, 32, 40, 48, 56, 64, 72, 80 ],
+  [ 9, 18, 27, 36, 45, 54, 63, 72, 81, 90 ] ]
+*/
+```
 
 
 ### Exemplo com Fisica

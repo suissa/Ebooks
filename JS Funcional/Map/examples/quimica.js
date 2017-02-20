@@ -2,8 +2,8 @@
 const Z_LIMIT = 83
 
 const classifiquePeloZ = ( atom ) => ( atom.Z >= Z_LIMIT) 
-                                                            ? Object.assign({}, atom, { radioactive: true })
-                                                            : Object.assign({}, atom, { radioactive: false })
+                                      ? Object.assign({}, atom, { radioactive: true })
+                                      : Object.assign({}, atom, { radioactive: false })
 
 
 const atom1 = {simbol: 'Be', Z: 4}
