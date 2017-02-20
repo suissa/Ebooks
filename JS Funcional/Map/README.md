@@ -1,5 +1,19 @@
 # Map
 
+## Pré-conhecimentos
+
+### [Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor)
+
+> A Functor is a function, given a value and a function, unwraps the values to get to its inner value(s), calls the given function with the 
+> inner value(s), wraps the returned values in a new structure, and returns the new structure.
+
+Vamos entender parte por parte:
+
+- *Functor* é uma função que irá receber um valor e uma função;
+- Desencapsula[?] os valores para chegar a seu(s) valor(es) interno(s);
+- Chama a função repassada com o(s) valor(es) interno(s);
+- Encapsula os valores devolvidos em uma nova estrutura;
+- e retorna a nova estrutura.
 
 ## Definição
 
@@ -26,24 +40,12 @@ console.log(x) //[2,4,6]
 
 [Documentação oficial do map em JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-Antes de entendermos como implementar o `map`, precisamos [lembrar que ele é um Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor):
-
-
-> A Functor is a function, given a value and a function, unwraps the values to get to its inner value(s), calls the given function with the 
-> inner value(s), wraps the returned values in a new structure, and returns the new structure.
-
-Vamos entender parte por parte:
-
-- *Functor* é uma função que irá receber um valor e uma função;
-- Desencapsula[?] os valores para chegar a seu(s) valor(es) interno(s);
-- Chama a função repassada com o(s) valor(es) interno(s);
-- Encapsula os valores devolvidos em uma nova estrutura;
-- e retorna a nova estrutura.
+Antes de entendermos como implementar o `map`, precisamos [lembrar que ele é um Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor)
 
 
 ## Criando o nosso
 
-Sabendo disso podemos começar a montar nosso `map`, criando a função `functor` que receberá o valor e a função a ser executada:
+Vamos começar a montar nosso `map`, criando a função `functor` que receberá o valor e a função a ser executada:
 
 ```js
 
