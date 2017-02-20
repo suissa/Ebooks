@@ -1,6 +1,18 @@
 # Map
 
+> **Serve para transformar valores dentro de um *Array*.**
+
+
+
+![](https://raw.githubusercontent.com/Webschool-io/workshop-js-funcional-free/master/assets/images/array-map.png)
+
+
+
 ## Pré-conhecimentos
+
+### Array
+
+// Escrever sobre o Array e seu prototype
 
 ### [Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor)
 
@@ -15,27 +27,42 @@ Vamos entender parte por parte:
 - Encapsula os valores devolvidos em uma nova estrutura;
 - e retorna a nova estrutura.
 
+
+
 ## Definição
 
 Lembrando do [nosso material do workshop](https://github.com/Webschool-io/workshop-js-funcional-free#map) sobre `map`:
 
-> O `map` é um método que executa um **`callback`** para cada valor de um **`array`** modificando os mesmos, isso faz 
-> com que o **`map`** crie um novo **`array`** com os novos valores obtidos. Exemplo:
+> O `map` é um método que executa um **`callback`** para cada valor de um **`array`** modificando os 
+> mesmos, fazendo com que o **`map`** crie um novo **`array`** com os novos valores obtidos. 
 
 
-```javascript
-var x = [1,2,3].map(function (value) {
+Exemplo:
+
+
+```js
+
+var arr = [1,2,3]
+var x = arr.map(function (value) {
   return value * 2
 });
 
+console.log(arr) //[1,2,3]
 console.log(x) //[2,4,6]
 ```
 
+
 Em ES6:
 
-```javascript
-const x = [1,2,3].map(v => v * 2);
+
+```js
+
+const arr = [1,2,3]
+const x = arr.map( v => v * 2 );
+
+console.log(arr) //[1,2,3]
 console.log(x) //[2,4,6]
+
 ```
 
 [Documentação oficial do map em JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
