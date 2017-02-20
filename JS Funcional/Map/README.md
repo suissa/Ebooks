@@ -7,7 +7,7 @@
 ![](https://raw.githubusercontent.com/Webschool-io/workshop-js-funcional-free/master/assets/images/array-map.png)
 
 
-> Analisando a imagem acima podemos inferir a ação da função map que irá cortar cada fruta, correto?
+> Analisando a imagem acima podemos inferir que a ação que a função map faz é cortar cada fruta, correto?
 
 
 ## Pré-conhecimentos
@@ -72,7 +72,6 @@ console.log(x) //[2,4,6]
 
 Antes de entendermos como implementar o `map` precisamos [lembrar que ele é um Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor).
 
-
 ## Criando o nosso
 
 Vamos começar a montar nosso `map` criando a função `functor` que receberá o valor e a função a ser executada:
@@ -111,8 +110,8 @@ console.log(p10)
 
 ## Testando
 
-Com isso já criamos a base para o nosso `map` e agora  precisamos obviamente fazer a mesma funcionar com *Array*, 
-porém antes iremos escrever o **TESTE** para ela: 
+Com isso já criamos a base para o nosso `map` e agora  precisamos obviamente fazer a mesma funcionar 
+com *Array*, porém antes iremos escrever o **TESTE** para ela: 
 
 ```js
 
@@ -673,13 +672,13 @@ Vamos ver como ela se comporta no nosso teste de mesa:
 ```
 
 > Sabe o porquê esse *Array* vai diminuindo?
-> 
-> 
-> 
-> 
-> **EXATAMENTE!** 
-> 
-> Porque a cada iteração nós retiramos a primeira posição que é o `head` e aplicamos a função `mapper` apenas nesse valor, isso vai acontecendo até que não exista mais elementos a serem processados.
+
+
+
+ 
+> \-**EXATAMENTE!** Porque a cada iteração nós retiramos a primeira posição que é o `head` e 
+> aplicamos a função `mapper` apenas nesse valor, isso vai acontecendo até que não exista mais 
+> elementos a serem processados.
 
 
 ## Map - COMPARAÇÃO
@@ -719,7 +718,8 @@ const map = (mapper, [head, ...tail]) =>
 
 ```
 
-Primeira coisa que devemos fazer é refatorar nossos parâmetros de entrada e **uma coisa impotantíssima: a condição de parada da função recursiva**
+Primeira coisa que devemos fazer é refatorar nossos parâmetros de entrada e uma coisa impotantíssima: 
+**a condição de parada da função recursiva**
 
 ```js
 
@@ -896,6 +896,7 @@ const transformToSeconds = ( obj ) => {
 module.exports = transformToSeconds
 
 ```
+
 
 
 #### Nota
