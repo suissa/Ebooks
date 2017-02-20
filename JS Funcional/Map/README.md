@@ -651,8 +651,9 @@ enquanto existir valor pro `head` ela irá continuar executando. Logo se esse va
 de se chamar e irá retornar `[]`.
 
 Então perceba que o *Array* de retorno da função `map` é gerado dinamicamente em cima do mesmo *Array*, 
-note que o valor passado para cada iteração dessa recursividade é o `[head, ...tail]`. Então vamos ver como ele 
-se comporta no nosso teste de mesa:
+note também que o valor passado para cada iteração dessa recursividade é o `[head, ...tail]`. 
+
+Vamos ver como ela se comporta no nosso teste de mesa:
 
 
 ```js
