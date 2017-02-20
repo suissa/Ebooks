@@ -772,6 +772,63 @@ Para criarmos aprendermos essa função foi necessário utilizarmos/conhecermos:
 
 ## Map - Exemplos
 
+### Exemplo com API
+
+
+Vamos usar um exemplo de retorno da [API do Redtube]():
+
+```
+
+{
+    "video": {
+        "duration": "14:08",
+        "views": "43110",
+        "video_id": "1103943",
+        "rating": "3.86",
+        "ratings": "236",
+      }
+  }
+
+```
+
+
+
+**Com esse exemplo iremos transformar HH:MM:SS em segundos:**
+
+
+
+```js
+
+const transformToSeconds = ( obj ) => {
+
+  const __obj = Object.assign( {}, obj )
+  const time = __obj.video.duration.split(':')
+  let seconds = 0
+  let begin = 0
+
+  if ( time.length === 3 ) {
+      seconds += parseInt( time[begin] * 3600 )
+      begin = 1
+    }
+    
+  seconds += parseInt( time[begin] * 60 )
+  seconds += parseInt( time[begin+1] )
+
+  __obj.video.duration = seconds
+  return __obj
+}
+
+module.exports = transformToSeconds
+
+```
+
+
+#### Nota
+
+> Perceba que usamos o `Object.assign( {}, obj )` para criar um Objeto novo baseado 
+> no original para que possamos **modificar seus valores sem modificar o ORIGINAL**.
+
+
 ### Exemplo com Matemática
 
 #### Transformar todos os valores de um conjunto
