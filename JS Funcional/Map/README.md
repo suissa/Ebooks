@@ -741,7 +741,7 @@ const map = ([head, ...tail], fn) => {
   
   if (!head) return []
 
-  return [fn(head), map(tail, fn)]
+  return [ fn(head), map(tail, fn) ]
 }
 
 ```
@@ -767,7 +767,8 @@ Com isso estamos quase lá, porém eu não usei `...map(tail, fn)` apenas para v
 
 > **Percebeu como o `...` é importantíssimo?**
 
-Então refatorando deixaremos nossa função assim:
+
+Então refatorando nossa função a deixaremos assim:
 
 
 ```js
@@ -776,7 +777,7 @@ const map = ([head, ...tail], fn) => {
   
   if (!head) return []
 
-  return [fn(head), ...map(tail, fn)]
+  return [ fn(head), ...map(tail, fn) ]
 }
 
 ```
@@ -787,7 +788,7 @@ Agora basta refatorarmos esse `if` normal para um ternário:
 
 const map = ([head, ...tail], fn) => (!head) 
                                         ? [] 
-                                        : [fn(head), ...map(tail, fn)]
+                                        : [ fn(head), ...map(tail, fn) ]
 
 module.exports = map
 
@@ -826,14 +827,14 @@ const map = (functor, data) => data.map ? data.map(functor) : functor(data)
 ```
 
 Dessa forma o primeiro teste é a verificação da existência da função `map` em `data`, 
-caso exista será *Array* pois só ele possui o `map`, se não será Objeto então basta chamar 
-a função diretamente passando `data` como parâmetro.
+caso exista será *Array* pois só ele possui o `map`, se não será Objeto, executando a função diretamente, 
+passando `data` como parâmetro.
 
 *ps: Aprendi essa técnica com o mestre [Hapan](https://github.com/halan)*
 
 ## Map - Conclusão
 
-Para criarmos aprendermos essa função foi necessário utilizarmos/conhecermos:
+Para criarmos e aprendermos essa função foi necessário utilizarmos/conhecermos:
 
 - arrow function
 - destructuring assignment
@@ -841,12 +842,13 @@ Para criarmos aprendermos essa função foi necessário utilizarmos/conhecermos:
 - if ternário
 - recursão
 
-// **ESCREVER MAIS**
+### Questionamento
+
+> **Agora quero que você me diga para que usaria o map?**
 
 ## Map - Exemplos
 
 ### Exemplo com API
-
 
 Vamos usar um exemplo de retorno da [API do Redtube]():
 
@@ -899,7 +901,7 @@ module.exports = transformToSeconds
 #### Nota
 
 > Perceba que usamos o `Object.assign( {}, obj )` para criar um Objeto novo baseado 
-> no original para que possamos **modificar seus valores sem modificar o ORIGINAL**.
+> no original, para que possamos **modificar seus valores sem modificar o ORIGINAL**.
 
 
 ### Exemplo com Matemática
@@ -944,13 +946,58 @@ const objeto4 = {m: 1, V: 3}
 
 const amostra = [ objeto1, objeto2, objeto3, objeto4 ]
 
-const densidades = amostra.map(calcDensity)
+const densidades = amostra.map( calcDensity )
 // [ 10, 23.333333333333332, 250, 0.3333333333333333 ]
 
 ```
 
 
 ### Exemplo com Química
+
+Podemos mapear os átomos para dizer se são ou não radioativos, sem filtra-los:
+
+
+Função de mapeamento:
+
+```js
+
+const Z_LIMIT = 83
+
+const classifiquePeloZ = ( atom ) => ( atom.Z >= Z_LIMIT) ? atom
+
+```
+
+
+Que usaremos na seguinte amostra:
+
+
+```js
+
+const atom1 = {simbol: 'Be', Z: 4}
+const atom2 = {simbol: 'Sc', Z: 21}
+const atom3 = {simbol: 'Hf', Z: 72}
+const atom4 = {simbol: 'Ta', Z: 73}
+const atom5 = {simbol: 'Ti', Z: 81}
+const atom6 = {simbol: 'Bi', Z: 83}
+const atom7 = {simbol: 'Mt', Z: 109}
+const atom8 = {simbol: 'Cn', Z: 112}
+
+const amostra = [ atom1, atom2, atom3, atom4, atom5, atom6, atom7, atom8 ]
+
+const resultado = amostra.map( classifiquePeloZ )
+console.log('resultado: ', resultado)
+/*
+resultado:  [ { simbol: 'Be', Z: 4, radioactive: false },
+  { simbol: 'Sc', Z: 21, radioactive: false },
+  { simbol: 'Hf', Z: 72, radioactive: false },
+  { simbol: 'Ta', Z: 73, radioactive: false },
+  { simbol: 'Ti', Z: 81, radioactive: false },
+  { simbol: 'Bi', Z: 83, radioactive: true },
+  { simbol: 'Mt', Z: 109, radioactive: true } ]
+*/
+
+```
+
 
 ### Exemplo com Biologia
 
