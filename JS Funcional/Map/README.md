@@ -1151,3 +1151,11 @@ const conjugacao = conjugacoes.map( conjugar( radical ) )
 ### Exemplo com História
 
 ### Exemplo com Filosofia
+
+## Embasamento Teórico
+
+- [What is a functor?](https://medium.com/@dtinth/what-is-a-functor-dcf510b098b6#.3fz4zg1vb)
+
+**Para alegria geral da nação ainda deixarei aqui um link FENOMENAL: [Functional Programming in Javascript](http://reactivex.io/learnrx/)**. O título parece meio bosta né? Mas acho que é o site com mais exercícios sobre JS Funcional que encontrei, espero que você também faça todos.
+
+> Bons estudos e até mais!
