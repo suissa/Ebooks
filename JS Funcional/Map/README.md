@@ -616,11 +616,12 @@ Sabemos então que na primeira parte, essa linha, `[ mapper(head), ...map(mapper
 
 ```
 
-Vamos nos atentar ao segundo valor desse *Array* que acredito ser o mais "complexo" de toda essa função. Quando 
+Vamos nos atentar ao segundo valor desse *Array*, que acredito ser o mais "complexo" de toda essa função. Quando 
 chamarmos `map(mapper, tail)` ele irá chamar a mesma função onde estamos, `map`, passando agora apenas o 
-*Array* `tail` que já não possui o primeiro valor, `head`, e retornar um *Array*. **Porém como precisamos pegar 
-cada valor desse *Array* e "juntar" com o primeiro valor já passado anteriormente necessitamos usar `...map(mapper, tail)` 
-pois será dessa forma que iremos criar o `[ mapper(head), ...map(mapper, tail) ]`.**
+*Array* `tail` que já não possui o primeiro valor, `head`, e retornar um *Array*. 
+
+**Porém precisamos pegar cada valor desse *Array* e "juntar" com o primeiro valor passado anteriormente, necessitamos 
+utilizar `...map(mapper, tail)` pois será dessa forma que iremos criar o `[ mapper(head), ...map(mapper, tail) ]`.**
 
 Então para criar a primeira iteração dessa função ela se chama para poder criar o resto do *Array*, entretando você 
 deve perguntar-se:
@@ -645,7 +646,8 @@ tail []
 
 ```
 
-Sabemos através da "tradução" do `if` ternário para o comum que o teste lógico é em cima do `head`, ou seja, enquanto existir valor pro `head` ela irá continuar executando. Logo se esse valor for `undefined` ela irá parar de se chamar e irá retornar `[]`.
+Sabemos através da "tradução" do `if` ternário para o comum que o teste lógico é em cima do `head`, ou seja, enquanto 
+existir valor pro `head` ela irá continuar executando. Logo se esse valor for `undefined` ela irá parar de se chamar e irá retornar `[]`.
 
 Então perceba que o *Array* de retorno da função `map` é gerado dinamicamente em cima do mesmo *Array*, note que o valor passado para cada iteração dessa recursividade é o `[head, ...tail]`. Então vamos ver como ele se comporta no nosso teste de mesa:
 
