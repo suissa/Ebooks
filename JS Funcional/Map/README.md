@@ -754,6 +754,8 @@ Dessa forma o primeiro teste é a verificação da existência da função `map`
 caso exista será *Array* pois só ele possui o `map`, se não será Objeto então basta chamar 
 a função diretamente passando `data` como parâmetro.
 
+*ps: Aprendi essa técnica com o mestre [Hapan](https://github.com/halan)*
+
 ## Map - Conclusão
 
 Para criarmos aprendermos essa função foi necessário utilizarmos/conhecermos:
