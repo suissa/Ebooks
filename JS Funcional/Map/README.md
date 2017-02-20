@@ -955,9 +955,10 @@ const densidades = amostra.map( calcDensity )
 
 ### Exemplo com Química
 
-Podemos mapear os átomos para dizer se são ou não radioativos, sem filtra-los:
+Podemos mapear os átomos para dizer se são ou não radioativos, sem filtra-los.
 
-Lembrando que Z representa o número atômico dos átomos, ou seja, a quantidade de prótons existentes no núcleo do átomo na sua forma elementar.
+Lembrando que Z representa o número atômico dos átomos, ou seja, a quantidade de prótons existentes 
+no núcleo do átomo na sua forma elementar.
 
 Função de mapeamento:
 
