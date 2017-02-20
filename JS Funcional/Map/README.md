@@ -953,6 +953,10 @@ const densidades = amostra.map( calcDensity )
 ```
 
 
+**[A execução desse código pode ser visualizada aqui](https://goo.gl/y9H656)**
+
+
+
 ### Exemplo com Química
 
 Podemos mapear os átomos para dizer se são ou não radioativos, sem filtra-los.
