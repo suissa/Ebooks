@@ -187,11 +187,13 @@ Depois basta executarmos `mocha examples/test/map.spec.js`:
 
 ## Refatorando
 
-Criei o teste com o *Number* apenas para vermos como a função funciona com 1 valor porém quebra com 1 *Array* 
-e o `map` na verdade só deveria funcionar com *Arrays*, **então bora refatorar!** 
+Criamos o teste com o *Number* apenas para vermos como a função executa com 1 valor, porém ela quebra 
+com 1 *Array* e o `map` na verdade só deveria funcionar **APENAS** com *Arrays*. 
 
-Inicialmente irei retornar apenas um *Array* para passarmos no teste do tipo de retorno, aliás também **comentei o 
-teste do *Number* para nos focarmos apenas no *Array*:**
+**Então bora refatorar!** 
+
+Inicialmente irei retornar apenas um *Array* para passarmos no teste do tipo de retorno, aliás também 
+**comentei o teste do *Number* para focarmos apenas no *Array*:**
 
 ```js
 
@@ -236,8 +238,8 @@ Para depois executarmos o teste novamente:
 
 Agora só falta passarmos pelo segundo teste, esse sim é nossa verdadeira prova, então vamos pensar:
 
-> Preciso fazer a função executar a função `fn` passada para cada elemento do *Array*, porém se estamos 
-> fazendo o `map` logicamente não poderemos utilizar o `forEach`, logo usaremos o `for`!
+> Precisamos fazer com que a função `map` execute a função `fn`, passada, para cada elemento do *Array*, 
+> porém se estamos fazendo o `map` logicamente não poderemos utilizar o `forEach`, logo usaremos o `for`!
 
 
 Sabendo disso nosso código ficará assim:
@@ -285,7 +287,7 @@ it('deve retornar um ERRO caso não seja Array', () => {
 
 ```
 
-Agora devemos executar o teste e vê-lo falhar para depois refatorarmos nossa função `map`:
+Depois deveremos executar o teste e vê-lo falhar, para depois refatorarmos nossa função `map`:
 
 
 ```
@@ -307,7 +309,9 @@ Agora devemos executar o teste e vê-lo falhar para depois refatorarmos nossa fu
 
 ```
 
-E para fazeros essa validação, se é um *Array*, existem diversas formas, contudo utilizaremos a mais fácil: `Array.isArray(value)`.
+
+E para fazermos essa validação, se é ou não um *Array*, existem diversas formas, utilizaremos a mais 
+fácil: `Array.isArray(value)`.
 
 Deixando nosso código assim:
 
