@@ -1,14 +1,13 @@
 # Map
 
-> **Serve para transformar valores dentro de um *Array*.**
+> **Serve para transformar valores de um *Array*.**
 
 
 
 ![](https://raw.githubusercontent.com/Webschool-io/workshop-js-funcional-free/master/assets/images/array-map.png)
 
 
-> Analisando a imagem acima podemos inferir que a função que o `map` irá executar em cada 
-> fruta é a de **cortar**, correto?
+> Analisando a imagem acima podemos inferir a ação da função map que irá cortar cada fruta, correto?
 
 
 ## Pré-conhecimentos
