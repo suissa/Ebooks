@@ -734,6 +734,26 @@ Executando, `mocha examples/test/map.nosso.spec.js`, nosso teste para essa funç
 ```
 
 
+## Map - Técnicas
+
+### Testar sua existência
+
+Caso você tenha criado uma função que execute em um Objeto e quer usar ela tanto 
+no Objeto como em Array basta fazer o seguinte:
+
+```js
+
+const map = (functor, data) => data.map ? data.map(functor) : functor(data)
+
+// const result = map(fn, obj)
+// const result = map(fn, arr)
+
+```
+
+Dessa forma o primeiro teste é a verificação da existência da função `map` em `data`, 
+caso exista será *Array* pois só ele possui o `map`, se não será Objeto então basta chamar 
+a função diretamente passando `data` como parâmetro.
+
 ## Map - Conclusão
 
 Para criarmos aprendermos essa função foi necessário utilizarmos/conhecermos:
@@ -801,6 +821,39 @@ const densidades = amostra.map(calcDensity)
 ### Exemplo com Biologia
 
 ### Exemplo com Português
+
+Imagine a seguinte conjugação verbal:
+
+```
+eu  programo
+tu  programas
+ele programa
+nós programamos
+vós programais
+eles  programam
+
+```
+
+- criar a conjugação verbal acima: 
+
+```js
+
+const radical = 'program'
+const sufixos = [
+  { pronome: 'eu', sufixo: 'o' }, 
+  { pronome: 'tu', sufixo: 'as' }, 
+  { pronome: 'ele', sufixo: 'a' }, 
+  { pronome: 'nós', sufixo: 'amos' }, 
+  { pronome: 'vós', sufixo: 'ais' }, 
+  { pronome: 'eles', sufixo: 'am' }
+]
+
+const conjugar = ( radical ) => ( conj ) =>`${conj.pronome} ${radical}${conj.sufixo}`
+
+const conjugacao = sufixos.map( conjugar( radical ) )
+
+```
+
 
 ### Exemplo com Inglês
 
