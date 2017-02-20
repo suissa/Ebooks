@@ -18,13 +18,14 @@
 
 ### [Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor)
 
-> A Functor is a function, given a value and a function, unwraps the values to get to its inner value(s), calls the given function with the 
-> inner value(s), wraps the returned values in a new structure, and returns the new structure.
+> A Functor is a function, given a value and a function, unwraps the values to get to its inner value(s), 
+> calls the given function with the inner value(s), wraps the returned values in a new structure, and 
+> returns the new structure.
 
 Vamos entender parte por parte:
 
 - *Functor* é uma função que irá receber um valor e uma função;
-- Desencapsula[?] os valores para chegar a seu(s) valor(es) interno(s);
+- Desencapsula os valores para chegar a seu(s) valor(es) interno(s);
 - Chama a função repassada com o(s) valor(es) interno(s);
 - Encapsula os valores devolvidos em uma nova estrutura;
 - e retorna a nova estrutura.
@@ -69,12 +70,12 @@ console.log(x) //[2,4,6]
 
 [Documentação oficial do map em JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
-Antes de entendermos como implementar o `map`, precisamos [lembrar que ele é um Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor)
+Antes de entendermos como implementar o `map` precisamos [lembrar que ele é um Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor).
 
 
 ## Criando o nosso
 
-Vamos começar a montar nosso `map`, criando a função `functor` que receberá o valor e a função a ser executada:
+Vamos começar a montar nosso `map` criando a função `functor` que receberá o valor e a função a ser executada:
 
 ```js
 
@@ -110,7 +111,8 @@ console.log(p10)
 
 ## Testando
 
-Com isso já criamos a base para o nosso `map`, agora obviamente precisamos fazer a mesma funcionar com *Array*, porém antes iremos escrever o **TESTE** para ela: 
+Com isso já criamos a base para o nosso `map` e agora  precisamos obviamente fazer a mesma funcionar com *Array*, 
+porém antes iremos escrever o **TESTE** para ela: 
 
 ```js
 
@@ -185,9 +187,11 @@ Depois basta executarmos `mocha examples/test/map.spec.js`:
 
 ## Refatorando
 
-Criei o teste com o *Number* apenas para vermos como a função funciona com 1 valor porém quebra com 1 *Array* e o `map` na verdade só deveria funcionar com *Arrays*, **então bora refatorar!** 
+Criei o teste com o *Number* apenas para vermos como a função funciona com 1 valor porém quebra com 1 *Array* 
+e o `map` na verdade só deveria funcionar com *Arrays*, **então bora refatorar!** 
 
-Inicialmente irei apenas retornar um *Array* para passarmos no teste do tipo de retorno, aliás também **comentei o teste do *Number* para nos focarmos apenas no *Array*:**
+Inicialmente irei retornar apenas um *Array* para passarmos no teste do tipo de retorno, aliás também **comentei o 
+teste do *Number* para nos focarmos apenas no *Array*:**
 
 ```js
 
@@ -232,7 +236,8 @@ Para depois executarmos o teste novamente:
 
 Agora só falta passarmos pelo segundo teste, esse sim é nossa verdadeira prova, então vamos pensar:
 
-> Preciso fazer a função executar a função `fn` passada para cada elemento do *Array*, porém se estamos fazendo o `map` logicamente não podemos utilizar o `forEach` logo usaremos o `for`!
+> Preciso fazer a função executar a função `fn` passada para cada elemento do *Array*, porém se estamos 
+> fazendo o `map` logicamente não poderemos utilizar o `forEach`, logo usaremos o `for`!
 
 
 Sabendo disso nosso código ficará assim:
@@ -265,7 +270,9 @@ Para garantir vamos executar nosso teste:
 
 ```
 
-> **SHOW DE BOLA!!!** Agora só precisamos implementar um teste para verificar se a entrada é realmente um *Array*.
+> **SHOW DE BOLA!!!** Agora só precisamos implementar um teste para verificar se a entrada é 
+> realmente um *Array*.
+
 
 Basta adicionarmos esse teste no nosso `describe`:
 
