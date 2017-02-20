@@ -515,7 +515,7 @@ ela desestrutura um Objeto ou *Array* para variáveis definidas.
 > Mas como ela sabe que o resto vai para o `tail?`
 
 
-> - Graças a essa chamada `...tail` e sabe o porquê foi utilizado esses `...`? 
+> \- Graças a essa chamada `...tail` e sabe o porquê foi utilizado esses `...`? 
 
 
 Essa funcionalidade chama-se [Spread operator](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator) e sua descrição é:
