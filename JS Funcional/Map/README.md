@@ -345,7 +345,9 @@ module.exports = map
 >
 > Por que você acha que fiz isso?
 > 
-> **- Bem simples, fiz isso para forçar o retorno de um BOOLEANO.** Pois quando utilizamos o primeiro `!` ele irá **NEGAR** o valor e usando o segundo `!` ele irá **NEGAR O VALOR DA NEGAÇÃO ANTERIOR** logo transformando esse valor para o que desejamos.
+> **- Bem simples! Fiz isso para forçar o retorno de um BOOLEANO,** pois quando utilizamos o primeiro `!` ele 
+> irá **NEGAR** o valor e usando o segundo `!` ele irá **NEGAR O VALOR DA NEGAÇÃO ANTERIOR** 
+> transformando esse valor para o que desejamos.
 
 
 
