@@ -356,8 +356,8 @@ module.exports = map
 
 ## Refatorando para FUNCIONAL
 
-Agora que já temos nossa implementação precisamos analisar esse exemplo puramente funcional e entender como 
-refatorar nosso código até chegar nele:
+Agora que já temos nossa implementação precisamos analisar esse exemplo puramente funcional e 
+entender como refatorar nosso código até chegar nele:
 
 ```js
 
@@ -369,8 +369,8 @@ const map = (mapper, [head, ...tail]) =>
 
 ```
 
-Como você deve ter percebido a ordem dos parâmetros é invertida, por isso iremos criar um outro teste para 
-essa função nova apenas invertendo os parâmetros na chamada da função:
+Como você deve ter percebido a ordem dos parâmetros é **invertida**, por isso iremos criar outro teste para 
+essa nova função apenas invertendo os parâmetros na chamada da função:
 
 ```js
 
@@ -433,9 +433,11 @@ const map = (mapper, [head, ...tail]) =>
 
 ```
 
-Analisamos seus parâmetros vimos que o primeiro é a função a ser executada em cada posição do *Array* mas e esse segundo parâmetro `[head, ...tail]`?
+Analisamos seus parâmetros vimos que o primeiro é a função a ser executada em cada posição do *Array*, mas e 
+esse segundo parâmetro `[head, ...tail]`?
 
-Vamos criar um tipo de teste de mesa para que possamos entender os valores de entrada, para isso modifiquei a função para:
+Vamos criar um tipo de teste de mesa para que possamos entender os valores de entrada, por isso modifiquei 
+a função para:
 
 ```js
 
@@ -504,15 +506,20 @@ Podemos notar que `[head, ...tail]` nada mais é do que o *Array* completo que e
 
 Note que passamos apenas 1 *Array* pra função `map`, porém ela separa em 2 valores: `head` e `tail`. 
 
-Isso acontece graças a [destructuring assignment](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao) que é a atribuição via desestruturação, ou seja, como o próprio nome diz: ela desestrutura um Objeto ou *Array* para variáveis definidas. 
+Isso acontece graças a [destructuring assignment](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Atribuicao_via_desestruturacao) que é uma atribuição via desestruturação, ou seja, como o próprio nome diz: 
+ela desestrutura um Objeto ou *Array* para variáveis definidas. 
 
-**Nesse caso a primeira posição do *Array* vai para `head` e o resto para `tail`!** Mas como ela sabe que 
-o resto vai para o `tail?`
+**Nesse caso a primeira posição do *Array* vai para `head` e o resto para `tail`!** 
 
 
-> Graças a essa chamada `...tail` e sabe o porquê foi utilizado esses `...`? 
->
-> Essa funcionalidade chama-se [Spread operator](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator) e sua descrição é:
+> Mas como ela sabe que o resto vai para o `tail?`
+
+
+> - Graças a essa chamada `...tail` e sabe o porquê foi utilizado esses `...`? 
+
+
+Essa funcionalidade chama-se [Spread operator](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_operator) e sua descrição é:
+
 > 
 > "O  operador spread permite uma expressão ser expandida em locais onde múltiplo argumentos 
 > (por chamadas de função) ou múltiplos elementos (por array literais) são esperados."
