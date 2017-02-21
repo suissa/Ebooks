@@ -1088,14 +1088,14 @@ soma dos prótons e nêutrons do átomo.
 
 const calcularMassaAtomica = ( atom ) => Object.assign( {}, atom, { A:  atom.Z + atom.N } )
 // colocar os numeros corretos de N
-const atom1 = { simbol: 'Be', Z: 4, N: 2 }
-const atom2 = { simbol: 'Sc', Z: 21, N: 2 }
-const atom3 = { simbol: 'Hf', Z: 72, N: 2 }
-const atom4 = { simbol: 'Ta', Z: 73, N: 2 }
-const atom5 = { simbol: 'Ti', Z: 81, N: 2 }
-const atom6 = { simbol: 'Bi', Z: 83, N: 2 }
-const atom7 = { simbol: 'Mt', Z: 109, N: 2 }
-const atom8 = { simbol: 'Cn', Z: 112, N: 2 }
+const atom1 = { simbol: 'Be', Z: 4, N: 5 }
+const atom2 = { simbol: 'Sc', Z: 21, N: 24 }
+const atom3 = { simbol: 'Hf', Z: 72, N: 106 }
+const atom4 = { simbol: 'Ta', Z: 73, N: 108 }
+const atom5 = { simbol: 'Ti', Z: 81, N: 123 }
+const atom6 = { simbol: 'Bi', Z: 83, N: 126 }
+const atom7 = { simbol: 'Mt', Z: 109, N: 159 }
+const atom8 = { simbol: 'Cn', Z: 112, N: 173 }
 
 const amostra = [ atom1, atom2, atom3, atom4, atom5, atom6, atom7, atom8 ]
 
