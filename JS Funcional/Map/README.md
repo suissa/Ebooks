@@ -16,19 +16,29 @@
 
 // Escrever sobre o Array e seu prototype
 
-### [Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor)
+### Functor
 
-> A Functor is a function, given a value and a function, unwraps the values to get to its inner value(s), 
-> calls the given function with the inner value(s), wraps the returned values in a new structure, and 
-> returns the new structure.
+> MANOOOOOOO DO CEUUUUU! Quanta informação errada encontrei por aí sobre esse tópico, então para que você não se foda como eu irei definir da forma mais clara e lúdica possível.
 
-Vamos entender parte por parte:
 
-- *Functor* é uma função que irá receber um valor e uma função;
-- Desencapsula os valores para chegar a seu(s) valor(es) interno(s);
-- Chama a função repassada com o(s) valor(es) interno(s);
-- Encapsula os valores devolvidos em uma nova estrutura;
-- e retorna a nova estrutura.
+Antes de tudo linkarei [esse material](http://functionaljavascript.blogspot.com.br/2013/07/functors.html) o qual eu tinha estudado antes e apenas agora entendo os erros que ele contem.
+
+Se vamos estudar JS Funcional nada melhor que nos basearmos no Haskell para isso, então veja comigo como é um *Functor* nele:
+
+```haskell
+
+class Functor f where  
+    fmap :: (a -> b) -> f a -> f b  
+
+```
+
+**Hora da análise!**
+
+Vemos que a função `fmap` "leva" uma função de um tipo para outro, `(a -> b) -> `, e um *Functor* é aplicado em um tipo, `f a ->`, e retorna um *Functor* aplicado com outro tipo, `f b`.
+
+
+> **Não entendi PORRA NENHUMA!
+
 
 
 

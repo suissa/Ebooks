@@ -11,3 +11,4 @@ são as funções a serem utilizadas com o *Array*.
 - [Filter]()
 - [Reduce]()
 - [Sort]()
+
