@@ -27,18 +27,22 @@
 
 ## Pré-conhecimentos
 
-### Array
-
-// Escrever sobre o Array e seu prototype
-
 ### Functor
 
+<br>
+<br>
+
 > **MANOOOOOOO DO CEUUUUU! VAI SE FODERRR!!!**
-> 
+
+<br>
+<br>
+
 > Quanta informação errada encontrei por aí sobre esse tópico, então para que você não se foda como eu irei definir da forma mais clara e lúdica possível.
 
+<br>
+<br>
 
-Antes de tudo linkarei [esse material](http://functionaljavascript.blogspot.com.br/2013/07/functors.html) o qual eu tinha estudado antes e apenas agora entendo os erros que ele contem.
+Antes de tudo linkarei [esse material](http://functionaljavascript.blogspot.com.br/2013/07/functors.html) o qual eu tinha estudado antes e agora vejo alguns erros que ele contem.
 
 <br>
 
@@ -87,6 +91,8 @@ Se você já ouviu falar sobre Matemática Discreta já conhece qual a base em q
 Caso a palavra `objeto` tenha te lembrado Orientação a Objetos, **ESQUEÇA ISSO!** Entretanto podemos entender esses objetos como conjuntos estruturados.
 
 Agora esse tal de morfismo acredito que nem você e nem eu conhecíamos antes, contudo seu conceito é **muito simples**, só para facilitar saiba que ele também pode ser chamado de setas, isso te lembra algo??
+
+<br>
 
 > **\- Arrow function tio Suissa???** =>
 >
@@ -290,8 +296,6 @@ console.log(x) //[2,4,6]
 ```
 
 [Documentação oficial do map em JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-
-Antes de entendermos como implementar o `map` precisamos [lembrar que ele é um Functor](https://github.com/Webschool-io/workshop-js-funcional-free#functor).
 
 ## Criando o nosso
 
