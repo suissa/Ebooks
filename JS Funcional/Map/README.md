@@ -23,6 +23,55 @@
 
 Antes de tudo linkarei [esse material](http://functionaljavascript.blogspot.com.br/2013/07/functors.html) o qual eu tinha estudado antes e apenas agora entendo os erros que ele contem.
 
+Para iniciar esse conceito precisamos saber de onde vem esse *Functor*, pois bem, ele vem da Matemática, de algo chamado **Teoria das Categorias**. Se você já ouviu falar sobre meus parabéns! Pois mesmo nas 2 faculdades de Informática que fiz e tive Matemática **PARA CARALEO** eu não vi essa porra.
+
+### Teoria das Categorias
+
+**Depois que comecei a estudar Funcional e conheci a Teoria das Categorias me apaixonei logo de cara!** Pois além de ser uma área da Matemática que eu nem sabia que existia ela ainda é *abstrata* e a programação Funcional simplesmente é baseada nela.
+
+Você deve perguntar-se:
+
+> **\- Baseada nela como???**
+
+Antes de lhe responder isso quero que você leia essa definição:
+
+> A teoria das categorias é uma teoria matemática que trata de forma abstrata das estruturas matemáticas e dos relacionamentos entre elas. É conhecida, em parte como brincadeira, como "generalização do sem-sentido abstrato". 
+
+**Aposto que quem criou essa brincadeira da "generalização do sem-sentido abstrato" nunca imaginaria que todo um paradigma de programação seria baseada nela**, até porque ela foi primeiramente apresentada por Samuel Eilenberg e Saunders Mac Lane em 1945, ou seja, bem antes do Haskell. :p
+
+Se você já ouviu falar sobre Matemática Discreta já sabe qual a base em que a Teoria das Categorias baseou-se, ela é uma generalização da teoria dos conjuntos, porém nela são estudados objetos e os morfismos entre eles.
+
+Caso a palavra `objeto` tenha te lembrado Orientação a Objetos, **ESQUEÇA ISSO!** Entretanto podemos entender esses objetos como conjuntos estruturados.
+
+Agora esse tal de morfismo acredito que nem você e nem eu conhecíamos antes, contudo seu conceito é **muito simples**, só para facilitar saiba que ele também pode ser chamado de setas, isso te lembra algo??
+
+> **\- Arrow function tio Suissa???** =>
+>
+> ORRRAAAA!!! Botei fé em você hein!
+
+Pois os morfismos são exatamente as funções entre os conjuntos
+
+> Teoria das categorias pode ser entendida como um "jogo de setas", em que se abstrai o significado das construções.
+
+O mais interessante é que a única operação exigida em uma categoria é a **composição**. Composição em categorias é uma generalização da composição de funções da teoria dos conjuntos.
+
+Só para entendermos o conceito em sua completude vamos relembrar o que é [composição de funções](https://pt.wikipedia.org/wiki/Composi%C3%A7%C3%A3o_de_fun%C3%A7%C3%B5es)
+
+
+> Em matemática, uma função composta é criada aplicando uma função à saída, ou resultado, de uma outra função, sucessivamente.
+
+Podemos entender melhor esse conceito podemos lê-lo facilmente assim:
+
+![](https://wikimedia.org/api/rest_v1/media/math/render/svg/d0f547d768439ec5b53744c552a39908cf8dd63e)
+
+![](http://geradormemes.com/media/created/321oat.jpg)
+
+![](https://upload.wikimedia.org/wikipedia/commons/6/68/Compfun.png)
+
+
+
+Functor, em Teoria das categorias, é um mapeamento entre categorias que preserva estruturas. Os functores podem ser entendidos como homomorfismos na categoria de todas as categorias pequenas (ou seja, a categoria que tem como objetos todas as categorias compostas por objetos que são conjuntos).
+
 Se vamos estudar JS Funcional nada melhor que nos basearmos no Haskell para isso, então veja comigo como é um *Functor* nele:
 
 ```haskell
@@ -42,6 +91,10 @@ Vemos que a função `fmap` "leva" uma função de um tipo para outro, `(a -> b)
 
 ![](https://github.com/suissa/Ebooks/blob/master/assets/images/meme-calma.jpg?raw=true)
 
+
+Então conheça a assinatura do `map`: `map :: (a -> b) -> [a] -> [b]`
+
+Analisando temos a mesma assinatura onde a função `a` converte para
 
 ## Definição
 
