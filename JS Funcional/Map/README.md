@@ -76,10 +76,25 @@ Para entender melhor esse conceito podemos lê-lo facilmente assim:
 <br>
 <br>
 <br>
+<br>
+<br>
 
+> **Brinks!** Olhe aí embaixo que deve clarear-lhe a mente.
+
+
+<br>
+<br>
+<br>
+
+<div style="text-align: center">
 ![](https://upload.wikimedia.org/wikipedia/commons/6/68/Compfun.png)
+</div>
 
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 Functor, em Teoria das categorias, é um mapeamento entre categorias que preserva estruturas. Os functores podem ser entendidos como homomorfismos na categoria de todas as categorias pequenas (ou seja, a categoria que tem como objetos todas as categorias compostas por objetos que são conjuntos).
 
