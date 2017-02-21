@@ -3,12 +3,25 @@
 > **Serve para transformar valores de um *Array*.**
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+
 
 ![](https://raw.githubusercontent.com/Webschool-io/workshop-js-funcional-free/master/assets/images/array-map.png)
 
+<br>
+<br>
+<br>
 
-> Analisando a imagem acima podemos inferir que a ação que a função map faz é cortar cada fruta, correto?
 
+> Analisando a imagem acima podemos inferir que a ação da função map é cortar cada fruta, correto?
+
+
+<br>
+<br>
 
 ## Pré-conhecimentos
 
@@ -18,7 +31,9 @@
 
 ### Functor
 
-> MANOOOOOOO DO CEUUUUU! Quanta informação errada encontrei por aí sobre esse tópico, então para que você não se foda como eu irei definir da forma mais clara e lúdica possível.
+> **MANOOOOOOO DO CEUUUUU! VAI SE FODERRR!!!**
+> 
+> Quanta informação errada encontrei por aí sobre esse tópico, então para que você não se foda como eu irei definir da forma mais clara e lúdica possível.
 
 
 Antes de tudo linkarei [esse material](http://functionaljavascript.blogspot.com.br/2013/07/functors.html) o qual eu tinha estudado antes e apenas agora entendo os erros que ele contem.
@@ -144,7 +159,7 @@ Podemos perceber facilmente que `B` é o retorno da função `f`, o qual é a en
 <br>
 <br>
 
-**Voltamos para um pouco mais de Matemática, sua linda!**
+**Voltamos para mais um pouco de Matemática, sua linda!**
 
 Functor, em Teoria das categorias, é um mapeamento entre categorias que preserva estruturas. Os functores podem ser entendidos como homomorfismos na categoria de todas as categorias pequenas (ou seja, a categoria que tem como objetos todas as categorias compostas por objetos que são conjuntos).
 
