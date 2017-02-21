@@ -144,6 +144,8 @@ Podemos perceber facilmente que `B` é o retorno da função `f`, o qual é a en
 <br>
 <br>
 
+**Voltamos para um pouco mais de Matemática, sua linda!**
+
 Functor, em Teoria das categorias, é um mapeamento entre categorias que preserva estruturas. Os functores podem ser entendidos como homomorfismos na categoria de todas as categorias pequenas (ou seja, a categoria que tem como objetos todas as categorias compostas por objetos que são conjuntos).
 
 Se vamos estudar JS Funcional nada melhor que nos basearmos no Haskell para isso, então veja comigo como é um *Functor* nele:
