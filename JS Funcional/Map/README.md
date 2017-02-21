@@ -60,16 +60,7 @@ Só para entendermos o conceito em sua completude vamos relembrar o que é [comp
 
 > Em matemática, uma função composta é criada aplicando uma função à saída, ou resultado, de uma outra função, sucessivamente.
 
-Para entender melhor esse conceito podemos lê-lo facilmente assim:
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-![](https://wikimedia.org/api/rest_v1/media/math/render/svg/d0f547d768439ec5b53744c552a39908cf8dd63e)
+Para entender melhor esse conceito podemos lê-lo facilmente assim: ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/d0f547d768439ec5b53744c552a39908cf8dd63e)
 
 <br>
 <br>
