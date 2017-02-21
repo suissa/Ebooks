@@ -38,9 +38,31 @@
 
 Antes de tudo linkarei [esse material](http://functionaljavascript.blogspot.com.br/2013/07/functors.html) o qual eu tinha estudado antes e apenas agora entendo os erros que ele contem.
 
-Para iniciar esse conceito precisamos saber de onde vem esse *Functor*, pois bem, ele vem da Matemática, de algo chamado **Teoria das Categorias**. Se você já ouviu falar sobre meus parabéns! Pois mesmo nas 2 faculdades de Informática que fiz e tive Matemática **PARA CARALEO** eu não vi essa porra.
 
-### Teoria das Categorias
+> Functors are basically things that can be mapped over. 
+
+*fonte: [http://learnyouahaskell.com/functors-applicative-functors-and-monoids](http://learnyouahaskell.com/functors-applicative-functors-and-monoids)*
+
+<br>
+<br>
+**Ou seja, um *Array* é um *Functor* **
+
+Concordo que ainda esta **MUITO ABSTRATO** porém para iniciar esse conceito precisamos saber de onde vem esse *Functor*, pois bem, ele vem da Matemática, de algo chamado **Teoria das Categorias**. 
+
+> Se você já ouviu falar sobre ela meus parabéns! Pois eu mesmo tendo feito 2 faculdades, uma de manhã e outra a noite, de Informática logo tive Matemática **PARA CARALEO** eu não vi essa **PORRA**.
+> 
+> Logo eu sendo gente boa pra cacete irei abordar todo esse conceito matemático para não deixarmos pontas soltas.
+
+<br>
+
+#### Teoria das Categorias
+
+<br>
+<br>
+![](https://camo.githubusercontent.com/18fe70890d1abed9d5261a97663172859b649847/68747470733a2f2f636c6475702e636f6d2f4467416a4b76587837572d3132303078313230302e706e67)
+
+<br>
+<br>
 
 **Depois que comecei a estudar Funcional e conheci a Teoria das Categorias me apaixonei logo de cara!** Pois além de ser uma área da Matemática que eu nem sabia que existia ela ainda é *abstrata* e a programação Funcional simplesmente é baseada nela.
 
@@ -161,7 +183,14 @@ Podemos perceber facilmente que `B` é o retorno da função `f`, o qual é a en
 
 **Voltamos para mais um pouco de Matemática, sua linda!**
 
-Functor, em Teoria das categorias, é um mapeamento entre categorias que preserva estruturas. Os functores podem ser entendidos como homomorfismos na categoria de todas as categorias pequenas (ou seja, a categoria que tem como objetos todas as categorias compostas por objetos que são conjuntos).
+<br>
+<br>
+![](https://camo.githubusercontent.com/18fe70890d1abed9d5261a97663172859b649847/68747470733a2f2f636c6475702e636f6d2f4467416a4b76587837572d3132303078313230302e706e67)
+
+<br>
+<br>
+
+Relembrando que o *Functor*, em Teoria das categorias, é um mapeamento entre categorias que preserva estruturas. Os functores podem ser entendidos como homomorfismos na categoria de todas as categorias pequenas (ou seja, a categoria que tem como objetos todas as categorias compostas por objetos que são conjuntos).
 
 Se vamos estudar JS Funcional nada melhor que nos basearmos no Haskell para isso, então veja comigo como é um *Functor* nele:
 
@@ -174,7 +203,8 @@ class Functor f where
 
 **Hora da análise!**
 
-Vemos que a função `fmap` "leva" uma função de um tipo para outro, `(a -> b) -> `, e um *Functor* é aplicado em um tipo, `f a ->`, e retorna um *Functor* aplicado com outro tipo, `f b`.
+Vemos que a função `fmap` recebe a função `a` de um tipo e retorna para outro `b`, `(a -> b) -> `, e uma "caixa" com `a`(s) que retorna outra "caixa" com `b`(s) dentro.
+
 
 
 > **Não entendi PORRA NENHUMA!**
@@ -183,16 +213,26 @@ Vemos que a função `fmap` "leva" uma função de um tipo para outro, `(a -> b)
 ![](https://github.com/suissa/Ebooks/blob/master/assets/images/meme-calma.jpg?raw=true)
 
 
-Então conheça a assinatura do `map`: `map :: (a -> b) -> [a] -> [b]`
+Vou ajudar-lhe pegando a definição da [mãe Wikipedia](https://pt.wikipedia.org/wiki/Teoria_das_categorias):
 
-Analisando temos a mesma assinatura onde a função `a` converte para
+<br>
+> Functores são mapeamentos entre categorias que preservam estruturas. 
 
+<br>
+
+Podemos ver isso pela assinatura do `map`: `map :: (a -> b) -> [a] -> [b]`
+
+Agora sim podemos ver que a transformação do tipo `a` para o tipo `b` preservam a mesma estrutura `[ ]`
+
+
+<br>
 ## Definição
 
+<br>
 Lembrando do [nosso material do workshop](https://github.com/Webschool-io/workshop-js-funcional-free#map) sobre `map`:
 
 > O `map` é um método que executa um **`callback`** para cada valor de um **`array`** modificando os 
-> mesmos, fazendo com que o **`map`** crie um novo **`array`** com os novos valores obtidos. 
+> mesmos, porém retornando esses valores em um novo **`array`**
 
 
 Exemplo:
@@ -1310,6 +1350,8 @@ const conjugacao = conjugacoes.map( conjugar( radical ) )
 ## Embasamento Teórico
 
 - [What is a functor?](https://medium.com/@dtinth/what-is-a-functor-dcf510b098b6#.3fz4zg1vb)
+- [Functors, Applicative Functors and Monoids](http://learnyouahaskell.com/functors-applicative-functors-and-monoids)
+
 
 **Para alegria geral da nação ainda deixarei aqui um link FENOMENAL: [Functional Programming in Javascript](http://reactivex.io/learnrx/)**. O título parece meio bosta né? Mas acho que é o site com mais exercícios sobre JS Funcional que encontrei, espero que você também faça todos.
 
