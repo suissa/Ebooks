@@ -26,4 +26,5 @@ const isFunctor = xs => xs.map ? allIsTrue(
 : false
 
 
-console.log(isFunctor({a: 2}))
+console.log(isFunctor( {a: 2} ))
+console.log(isFunctor( [1, 2, 3, 4] ))
