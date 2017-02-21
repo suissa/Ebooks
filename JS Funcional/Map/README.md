@@ -111,7 +111,38 @@ E a função `g` como: ![](https://wikimedia.org/api/rest_v1/media/math/render/s
 Então definimos: ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/59b149046dddc57f20cf28d31fd8d2ae56d36282) como sendo a composição de `f` e `g`, ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/6d3e40c53ec18498db6be88e08dc90b74dcc86f3), desde que ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/ecbdf10291f17aad3c514cb516fe465f571055e5) para todo ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/27bcc9b2afb295d4234bc294860cd0c63bcad2ca)
 
 
+<br>
+<br>
+<br>
 
+Podemos perceber facilmente que `B` é o retorno da função `f`, o qual é a entrada da função `g`, que irá retornar `C`. 
+
+<br>
+<br>
+<br>
+
+> **Compreendeste???**
+
+<br>
+<br>
+<br>
+
+**Depois dessa maratona básica de Matemática vamos logo para o código!**
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+![](http://geradormemes.com/media/created/vfnlfs.jpg)
+
+
+<br>
+<br>
+<br>
 
 Functor, em Teoria das categorias, é um mapeamento entre categorias que preserva estruturas. Os functores podem ser entendidos como homomorfismos na categoria de todas as categorias pequenas (ou seja, a categoria que tem como objetos todas as categorias compostas por objetos que são conjuntos).
 
