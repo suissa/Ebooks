@@ -93,13 +93,22 @@ Para entender melhor esse conceito podemos lê-lo facilmente assim: ![](https://
 
 > Percebeu que a função inicial é a `f(x)` e depois vem a `g`?
 > 
-> Por que você acha que iniciou na `f` e não na `g`, como vimos na imagem anterior? 
+> Por que você acha que iniciou na `f` e não na `g`, como vimos nessa imagem? 
 > 
 > ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/d0f547d768439ec5b53744c552a39908cf8dd63e)
 
 <br>
 <br>
 <br>
+
+Assim como na Programação, como na Matemática as funções são executadas de dentro para fora, por isso a função `f` é a primeira na imagem do conjunto.
+
+Entrando um pouco mais a fundo na Matemática, podemos definir a função `f` como: ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/aa2fb4d5e9d282ee5442719053c46ad1ad96f2ca)
+
+E a função `g` como: ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/fa4737b6ff067a09e20fa0775da82aae8b86ed82)
+
+
+Então definimos: ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/59b149046dddc57f20cf28d31fd8d2ae56d36282) como sendo a composição de `f` e `g`, ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/6d3e40c53ec18498db6be88e08dc90b74dcc86f3), desde que ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/ecbdf10291f17aad3c514cb516fe465f571055e5) para todo ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/27bcc9b2afb295d4234bc294860cd0c63bcad2ca)
 
 
 
