@@ -32,6 +32,8 @@
 <br>
 <br>
 
+![](https://github.com/fantasyland/fantasy-land/blob/master/figures/dependencies.png?raw=true)
+
 > **MANOOOOOOO DO CEUUUUU! VAI SE FODERRR!!!**
 
 <br>
@@ -944,8 +946,9 @@ const map = (mapper, [head, ...tail]) =>
 ```
 
 Primeira coisa que devemos fazer é refatorar nossos parâmetros de entrada e uma coisa impotantíssima: 
+<br>
 **a condição de parada da função recursiva**
-
+<br>
 ```js
 
 const map = ([head, ...tail], fn) => {
@@ -957,9 +960,9 @@ const map = ([head, ...tail], fn) => {
 }
 
 ```
-
+<br>
 Depois precisamos fazer a chamada recursiva passando os valores corretamente:
-
+<br>
 ```js
 
 const map = ([head, ...tail], fn) => {
@@ -970,9 +973,9 @@ const map = ([head, ...tail], fn) => {
 }
 
 ```
-
+<br>
 Com isso estamos quase lá, porém eu não usei `...map(tail, fn)` apenas para vermos como ficaria essa saída errada:
-
+<br>
 ```js
 
       -  [
@@ -989,12 +992,12 @@ Com isso estamos quase lá, porém eu não usei `...map(tail, fn)` apenas para v
       -    ]
       -  ]
 ```
-
+<br>
 > **Percebeu como o `...` é importantíssimo?**
-
+<br>
 
 Então refatorando nossa função a deixaremos assim:
-
+<br>
 
 ```js
 
@@ -1006,9 +1009,9 @@ const map = ([head, ...tail], fn) => {
 }
 
 ```
-
+<br>
 Agora basta refatorarmos esse `if` normal para um ternário:
-
+<br>
 ```js
 
 const map = ([head, ...tail], fn) => (!head) 
@@ -1018,9 +1021,9 @@ const map = ([head, ...tail], fn) => (!head)
 module.exports = map
 
 ```
-
+<br>
 Executando, `mocha examples/test/map.nosso.spec.js`, nosso teste para essa função teremos o seguinte resultado:
-
+<br>
 ```
 
   Map
@@ -1056,6 +1059,12 @@ caso exista será *Array* pois só ele possui o `map`, se não será Objeto, exe
 passando `data` como parâmetro.
 
 *ps: Aprendi essa técnica com o mestre [Hapan](https://github.com/halan)*
+
+## Fan†asyLand
+
+### [Functor](https://github.com/fantasyland/fantasy-land#functor)
+
+No *Functor* possuímos duas regras
 
 ## Map - Conclusão
 
