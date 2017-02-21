@@ -87,7 +87,7 @@ Para entender melhor esse conceito podemos lê-lo facilmente assim:
 <br>
 
 <div style="text-align: center">
-![](https://upload.wikimedia.org/wikipedia/commons/6/68/Compfun.png)
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Compfun.png" />
 </div>
 
 <br>
