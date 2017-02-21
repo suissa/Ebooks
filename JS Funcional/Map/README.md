@@ -85,14 +85,24 @@ Para entender melhor esse conceito podemos lê-lo facilmente assim: ![](https://
 <br>
 
 <div style="text-align: center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Compfun.png" />
+  <img style="text-align: center" src="https://upload.wikimedia.org/wikipedia/commons/6/68/Compfun.png" />
 </div>
 
 <br>
 <br>
+
+> Percebeu que a função inicial é a `f(x)` e depois vem a `g`?
+> 
+> Por que você acha que iniciou na `f` e não na `g`, como vimos na imagem anterior? 
+> 
+> ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/d0f547d768439ec5b53744c552a39908cf8dd63e)
+
 <br>
 <br>
 <br>
+
+
+
 
 Functor, em Teoria das categorias, é um mapeamento entre categorias que preserva estruturas. Os functores podem ser entendidos como homomorfismos na categoria de todas as categorias pequenas (ou seja, a categoria que tem como objetos todas as categorias compostas por objetos que são conjuntos).
 
