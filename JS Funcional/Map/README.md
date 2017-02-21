@@ -1,10 +1,12 @@
 # Map
 
+
+<br>
+<br>
+
 > **Serve para transformar valores de um *Array*.**
 
 
-<br>
-<br>
 <br>
 <br>
 <br>
