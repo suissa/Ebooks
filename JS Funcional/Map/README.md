@@ -37,9 +37,10 @@ class Functor f where
 Vemos que a função `fmap` "leva" uma função de um tipo para outro, `(a -> b) -> `, e um *Functor* é aplicado em um tipo, `f a ->`, e retorna um *Functor* aplicado com outro tipo, `f b`.
 
 
-> **Não entendi PORRA NENHUMA!
+> **Não entendi PORRA NENHUMA!**
 
 
+![](https://github.com/suissa/Ebooks/blob/master/assets/images/meme-calma.jpg?raw=true)
 
 
 ## Definição
