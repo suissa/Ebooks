@@ -40,6 +40,9 @@
 
 Antes de tudo linkarei [esse material](http://functionaljavascript.blogspot.com.br/2013/07/functors.html) o qual eu tinha estudado antes e apenas agora entendo os erros que ele contem.
 
+<br>
+
+Segundo nosso amado Haskell:
 
 > Functors are basically things that can be mapped over. 
 
@@ -47,9 +50,8 @@ Antes de tudo linkarei [esse material](http://functionaljavascript.blogspot.com.
 
 <br>
 <br>
-**Ou seja, um *Array* é um *Functor* **
 
-Concordo que ainda esta **MUITO ABSTRATO** porém para iniciar esse conceito precisamos saber de onde vem esse *Functor*, pois bem, ele vem da Matemática, de algo chamado **Teoria das Categorias**. 
+Concordo que ainda esta **MUITO ABSTRATO**, porém para iniciar esse conceito precisamos saber de onde vem esse *Functor*, pois bem, ele vem da Matemática, de algo chamado **Teoria das Categorias**. 
 
 > Se você já ouviu falar sobre ela meus parabéns! Pois eu mesmo tendo feito 2 faculdades, uma de manhã e outra a noite, de Informática logo tive Matemática **PARA CARALEO** eu não vi essa **PORRA**.
 > 
@@ -66,19 +68,21 @@ Concordo que ainda esta **MUITO ABSTRATO** porém para iniciar esse conceito pre
 <br>
 <br>
 
-**Depois que comecei a estudar Funcional e conheci a Teoria das Categorias me apaixonei logo de cara!** Pois além de ser uma área da Matemática que eu nem sabia que existia ela ainda é *abstrata* e a programação Funcional simplesmente é baseada nela.
+**Depois que comecei a estudar Funcional e conheci a Teoria das Categorias me apaixonei logo de cara!** Pois além de ser uma área da Matemática que eu nem sabia que existia ela ainda é *abstrata* e a Programação Funcional simplesmente é baseada nela.
 
 Você deve perguntar-se:
 
 > **\- Baseada nela como???**
 
-Antes de lhe responder isso quero que você leia essa definição:
+<br>
+Antes de lhe responder isso, quero que você leia essa definição:
+<br>
 
 > A teoria das categorias é uma teoria matemática que trata de forma abstrata das estruturas matemáticas e dos relacionamentos entre elas. É conhecida, em parte como brincadeira, como "generalização do sem-sentido abstrato". 
 
 **Aposto que quem criou essa brincadeira da "generalização do sem-sentido abstrato" nunca imaginaria que todo um paradigma de programação seria baseada nela**, até porque ela foi primeiramente apresentada por Samuel Eilenberg e Saunders Mac Lane em 1945, ou seja, bem antes do Haskell. :p
 
-Se você já ouviu falar sobre Matemática Discreta já sabe qual a base em que a Teoria das Categorias baseou-se, ela é uma generalização da teoria dos conjuntos, porém nela são estudados objetos e os morfismos entre eles.
+Se você já ouviu falar sobre Matemática Discreta já conhece qual a base em que a Teoria das Categorias baseou-se, ela é uma generalização da teoria dos conjuntos, porém nela são estudados objetos e os morfismos entre eles.
 
 Caso a palavra `objeto` tenha te lembrado Orientação a Objetos, **ESQUEÇA ISSO!** Entretanto podemos entender esses objetos como conjuntos estruturados.
 
@@ -88,18 +92,24 @@ Agora esse tal de morfismo acredito que nem você e nem eu conhecíamos antes, c
 >
 > ORRRAAAA!!! Botei fé em você hein!
 
-Pois os morfismos são exatamente as funções entre os conjuntos
+<br>
+**Pois os morfismos são exatamente as funções entre os conjuntos!**
+<br>
 
 > Teoria das categorias pode ser entendida como um "jogo de setas", em que se abstrai o significado das construções.
 
+<br>
 O mais interessante é que a única operação exigida em uma categoria é a **composição**. Composição em categorias é uma generalização da composição de funções da teoria dos conjuntos.
 
-Só para entendermos o conceito em sua completude vamos relembrar o que é [composição de funções](https://pt.wikipedia.org/wiki/Composi%C3%A7%C3%A3o_de_fun%C3%A7%C3%B5es)
+Só para entendermos esse conceito em sua completude vamos relembrar o que é [composição de funções](https://pt.wikipedia.org/wiki/Composi%C3%A7%C3%A3o_de_fun%C3%A7%C3%B5es):
 
+<br>
 
 > Em matemática, uma função composta é criada aplicando uma função à saída, ou resultado, de uma outra função, sucessivamente.
 
-Para entender melhor esse conceito podemos lê-lo facilmente assim: ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/d0f547d768439ec5b53744c552a39908cf8dd63e)
+<br>
+
+Para entendermos melhor a composição, podemos lê-la facilmente assim: ![](https://wikimedia.org/api/rest_v1/media/math/render/svg/d0f547d768439ec5b53744c552a39908cf8dd63e)
 
 <br>
 <br>
@@ -194,7 +204,9 @@ Podemos perceber facilmente que `B` é o retorno da função `f`, o qual é a en
 
 Relembrando que o *Functor*, em Teoria das categorias, é um mapeamento entre categorias que preserva estruturas. Os functores podem ser entendidos como homomorfismos na categoria de todas as categorias pequenas (ou seja, a categoria que tem como objetos todas as categorias compostas por objetos que são conjuntos).
 
-Se vamos estudar JS Funcional nada melhor que nos basearmos no Haskell para isso, então veja comigo como é um *Functor* nele:
+<br>
+<br>
+**Se vamos estudar JS Funcional nada melhor que nos basearmos no Haskell para isso**, então veja comigo como é um *Functor* nele:
 
 ```haskell
 
@@ -203,17 +215,29 @@ class Functor f where
 
 ```
 
+<br>
+<br>
 **Hora da análise!**
+
+<br>
+<br>
 
 Vemos que a função `fmap` recebe a função `a` de um tipo e retorna para outro `b`, `(a -> b) -> `, e uma "caixa" com `a`(s) que retorna outra "caixa" com `b`(s) dentro.
 
+<br>
+<br>
 
 
 > **Não entendi PORRA NENHUMA!**
 
 
+<br>
+<br>
+
 ![](https://github.com/suissa/Ebooks/blob/master/assets/images/meme-calma.jpg?raw=true)
 
+<br>
+<br>
 
 Vou ajudar-lhe pegando a definição da [mãe Wikipedia](https://pt.wikipedia.org/wiki/Teoria_das_categorias):
 
